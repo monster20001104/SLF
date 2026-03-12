@@ -1,0 +1,2 @@
+-F ../../../common/rtl.f
+mlite2avmm_tb.sv

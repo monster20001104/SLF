@@ -1,0 +1,34 @@
+`include "../common/common64.rdlh"
+
+addrmap tlp_adap_arbiter_reg_dfx{
+    reg arbiter_sch_weight_wr{
+        swcfg_field arbiter_sch_weight_wr[63:0] = 64'h1111111111111118;
+    };
+    arbiter_sch_weight_wr arbiter_sch_weight_wr @0x0;
+    
+    reg arbiter_sch_weight_rd{
+        swcfg_field arbiter_sch_weight_rd[63:0] = 64'h1111111111111111;
+    };
+    arbiter_sch_weight_rd arbiter_sch_weight_rd @0x8;
+
+    reg max_shaping_token{
+        swcfg_field max_shaping_token[11:0] = 12'h100;
+    };
+    max_shaping_token max_shaping_token @0x10;
+
+    reg arbiter_err{
+        woclr_field arbiter_err[63:0] = 0;
+    };
+    arbiter_err arbiter_err @0x80;
+    
+    reg arbiter_status{
+        hwsts_field arbiter_status[63:0] = 0;
+    };
+    arbiter_status arbiter_status @0x100;
+
+    reg arbiter_cnt{
+        woclr_field arbiter_cnt[63:0] = 0;
+    }; 
+    arbiter_cnt arbiter_cnt @0x200;
+
+};

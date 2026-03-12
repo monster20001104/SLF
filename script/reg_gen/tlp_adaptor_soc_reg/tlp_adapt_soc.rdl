@@ -1,0 +1,226 @@
+`include "../common/common64.rdlh"
+
+addrmap alt_tlp_adaptor_soc_dfx{
+    reg sop_eop_err{
+        woclr_field sop_eop_err[31:0] = 0;
+    };
+    sop_eop_err sop_eop_err @0x000;      
+
+    reg adaptor_cnt{
+        hwsts_field adaptor_cnt[31:0] = 0;
+    };
+    adaptor_cnt adaptor_cnt @0x008;
+
+    reg ur_construction_stat{
+        hwsts_field ur_construction_stat[31:0] = 0;
+    };
+    ur_construction_stat ur_construction_stat @0x010;
+
+    reg tx_rd{
+        hwsts_field tx_rd[31:0] = 0;
+    };
+    tx_rd tx_rd @0x018; 
+
+    reg tx_wr{
+        hwsts_field tx_wr[31:0] = 0;
+    };
+    tx_wr tx_wr @0x020; 
+
+    reg rd_rsp{
+        hwsts_field rd_rsp[31:0] = 0;
+    };
+    rd_rsp rd_rsp @0x028; 
+
+    reg tx_cw_hip_if{
+        hwsts_field tx_cw_hip_if[31:0] = 0;
+    };
+    tx_cw_hip_if tx_cw_hip_if @0x030; 
+
+    reg tx_r_hip_if{
+        hwsts_field tx_r_hip_if[31:0] = 0;
+    };
+    tx_r_hip_if tx_r_hip_if @0x038;   
+
+    reg tx_mppc_combination{
+        hwsts_field tx_mppc_combination[31:0] = 0;
+    };
+    tx_mppc_combination tx_mppc_combination @0x40;     
+     
+    reg tx_credit{
+        hwsts_field tx_credit[63:0] = 0;
+    };
+    tx_credit tx_credit @0x48;  
+
+    reg rx_mppc_split{
+        hwsts_field rx_mppc_split[31:0] = 0;
+    };
+    rx_mppc_split rx_mppc_split @0x50;  
+
+    reg tracing{
+        hwsts_field tracing[31:0] = 0;
+    };
+    tracing tracing @0x58; 
+
+    reg tx_rd_err{
+        woclr_field tx_rd_err[31:0] = 0;
+    };
+    tx_rd_err tx_rd_err @0x060; 
+
+    reg tx_wr_err{
+        woclr_field tx_wr_err[31:0] = 0;
+    };
+    tx_wr_err tx_wr_err @0x068; 
+
+    reg rd_rsp_err{
+        woclr_field rd_rsp_err[63:0] = 0;
+    };
+    rd_rsp_err rd_rsp_err @0x070; 
+
+    reg tx_cw_hip_if_err{
+        woclr_field tx_cw_hip_if_err[31:0] = 0;
+    };
+    tx_cw_hip_if_err tx_cw_hip_if_err @0x078; 
+
+    reg tx_r_hip_if_err{
+        woclr_field tx_r_hip_if_err[31:0] = 0;
+    };
+    tx_r_hip_if_err tx_r_hip_if_err @0x080;   
+
+    reg tx_mppc_combination_err{
+        woclr_field tx_mppc_combination_err[31:0] = 0;
+    };
+    tx_mppc_combination_err tx_mppc_combination_err @0x88;     
+
+    reg rx_mppc_split_err{
+        woclr_field rx_mppc_split_err[31:0] = 0;
+    };
+    rx_mppc_split_err rx_mppc_split_err @0x90;  
+
+    reg tracing_err{
+        woclr_field tracing_err[31:0] = 0;
+    };
+    tracing_err tracing_err @0x98; 
+
+    reg soc_dfx_1us_cnt{
+        hwsts_field soc_dfx_1us_cnt[31:0] = 0;
+    };
+    soc_dfx_1us_cnt soc_dfx_1us_cnt @0x100;
+
+    reg soc_dfx_1us_2us_cnt{
+        hwsts_field soc_dfx_1us_2us_cnt[31:0] = 0;
+    };
+    soc_dfx_1us_2us_cnt soc_dfx_1us_2us_cnt @0x108;
+
+    reg soc_dfx_2us_4us_cnt{
+        hwsts_field soc_dfx_2us_4us_cnt[31:0] = 0;
+    };
+    soc_dfx_2us_4us_cnt soc_dfx_2us_4us_cnt @0x110;
+
+    reg soc_dfx_4us_8us_cnt{
+        hwsts_field soc_dfx_4us_8us_cnt[31:0] = 0;
+    };
+    soc_dfx_4us_8us_cnt soc_dfx_4us_8us_cnt @0x118;
+
+    reg soc_dfx_8us_32us_cnt{
+        hwsts_field soc_dfx_8us_32us_cnt[31:0] = 0;
+    };
+    soc_dfx_8us_32us_cnt soc_dfx_8us_32us_cnt @0x120;
+
+    reg soc_dfx_32us_512us_cnt{
+        hwsts_field soc_dfx_32us_512us_cnt[31:0] = 0;
+    };
+    soc_dfx_32us_512us_cnt soc_dfx_32us_512us_cnt @0x128;
+
+    reg soc_dfx_512us_cnt{
+        hwsts_field soc_dfx_512us_cnt[31:0] = 0;
+    };
+    soc_dfx_512us_cnt soc_dfx_512us_cnt @0x130;
+
+
+    reg soc_dfx_delay_fifo_stat{
+        hwsts_field soc_dfx_delay_fifo_stat[31:0] = 0;
+    };
+    soc_dfx_delay_fifo_stat soc_dfx_delay_fifo_stat @0x138;
+
+    reg soc_bp_block_cnt{
+        hwsts_field soc_bp_block_cnt[63:0] = 0;
+    };
+    soc_bp_block_cnt soc_bp_block_cnt @0x140;
+
+    reg soc_bp_vdata_cnt{
+        hwsts_field soc_bp_vdata_cnt[63:0] = 0;
+    };
+    soc_bp_vdata_cnt soc_bp_vdata_cnt @0x148;
+
+    reg soc_bp_block_cnt1{
+        hwsts_field soc_bp_block_cnt1[63:0] = 0;
+    };
+    soc_bp_block_cnt1 soc_bp_block_cnt1 @0x150;
+
+    reg soc_bp_vdata_cnt1{
+        hwsts_field soc_bp_vdata_cnt1[63:0] = 0;
+    };
+    soc_bp_vdata_cnt1 soc_bp_vdata_cnt1 @0x158;
+
+    reg soc_dfx_tlp_rd_1us_cnt{
+        hwsts_field soc_dfx_tlp_rd_1us_cnt[31:0] = 0;
+    };
+    soc_dfx_tlp_rd_1us_cnt soc_dfx_tlp_rd_1us_cnt @0x200;
+
+    reg soc_dfx_tlp_rd_1us_2us_cnt{
+        hwsts_field soc_dfx_tlp_rd_1us_2us_cnt[31:0] = 0;
+    };
+    soc_dfx_tlp_rd_1us_2us_cnt soc_dfx_tlp_rd_1us_2us_cnt @0x208;
+
+    reg soc_dfx_tlp_rd_2us_4us_cnt{
+        hwsts_field soc_dfx_tlp_rd_2us_4us_cnt[31:0] = 0;
+    };
+    soc_dfx_tlp_rd_2us_4us_cnt soc_dfx_tlp_rd_2us_4us_cnt @0x210;
+
+    reg soc_dfx_tlp_rd_4us_8us_cnt{
+        hwsts_field soc_dfx_tlp_rd_4us_8us_cnt[31:0] = 0;
+    };
+    soc_dfx_tlp_rd_4us_8us_cnt soc_dfx_tlp_rd_4us_8us_cnt @0x218;
+
+    reg soc_dfx_tlp_rd_8us_32us_cnt{
+        hwsts_field soc_dfx_tlp_rd_8us_32us_cnt[31:0] = 0;
+    };
+    soc_dfx_tlp_rd_8us_32us_cnt soc_dfx_tlp_rd_8us_32us_cnt @0x220;
+
+    reg soc_dfx_tlp_rd_32us_512us_cnt{
+        hwsts_field soc_dfx_tlp_rd_32us_512us_cnt[31:0] = 0;
+    };
+    soc_dfx_tlp_rd_32us_512us_cnt soc_dfx_tlp_rd_32us_512us_cnt @0x228;
+
+    reg soc_dfx_tlp_rd_512us_cnt{
+        hwsts_field soc_dfx_tlp_rd_512us_cnt[31:0] = 0;
+    };
+    soc_dfx_tlp_rd_512us_cnt soc_dfx_tlp_rd_512us_cnt @0x230;
+
+
+    reg soc_dfx_delay_ram_stat{
+        hwsts_field soc_dfx_delay_ram_stat[31:0] = 0;
+    };
+    soc_dfx_delay_ram_stat soc_dfx_delay_ram_stat @0x238;
+
+    reg ur_construction_err{
+        woclr_field ur_construction_err[31:0] = 0;
+    };
+    ur_construction_err ur_construction_err @0x300;
+
+    reg avmm_err{
+        woclr_field avmm_err[31:0] = 0;
+    };
+    avmm_err avmm_err @0x308;
+
+    reg avmm_stat{
+        hwsts_field avmm_stat[31:0] = 0;
+    };
+    avmm_stat avmm_stat @0x310;
+
+    reg infinite_credit_enable{
+        swcfg_field infinite_credit_enable[0:0] = 0;
+    };
+    infinite_credit_enable infinite_credit_enable @0x1000;
+
+};

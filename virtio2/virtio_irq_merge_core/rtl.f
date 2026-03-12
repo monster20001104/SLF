@@ -1,0 +1,5 @@
++incdir+.
+virtio_irq_merge_core_eng.sv
+virtio_irq_merge_core_scan.sv
+virtio_irq_merge_core_time.sv
+virtio_irq_merge_core_top.sv

@@ -1,0 +1,4 @@
+-F ../../../common/rtl.f
++incdir+../../../src/virtio2/.
+../../../src/virtio2/virtio_used/virtio_used_sch.sv
+virtio_used_sch_tb.sv

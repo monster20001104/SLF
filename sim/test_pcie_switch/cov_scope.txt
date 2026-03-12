@@ -1,0 +1,13 @@
++tree pcie_switch_tb.u_pcie_switch_top 0
+-module yucca_sync_fifo
+-module yucca_async_fifo
+-module scfifo
+-module dcfifo
+-module dcfifo_mixed_widths
+-module dcfifo_low_latency
+-module dcfifo_async
+-module dcfifo_dffpipe
+-module dcfifo_fefifo
+-module ALTERA_DEVICE_FAMILIES
+-module ALTERA_MF_HINT_EVALUATION
+-module pcie_switch_dfx

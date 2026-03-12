@@ -1,0 +1,428 @@
+#!/usr/bin/env python3
+################################################################################
+#  文件名称 : test_virtio_nettx_tb.py
+#  作者名称 : Yun Feilong
+#  创建日期 : 2025/07/17
+#  功能描述 : 
+# 
+#  修改记录 : 
+# 
+#  版本号  日期       修改人       修改内容
+#  v1.0  07/17     Yun Feilong   初始化版本
+################################################################################
+
+import itertools
+import logging
+from logging.handlers import RotatingFileHandler
+import os
+import sys
+import random
+import cocotb_test.simulator
+
+import cocotb
+from cocotb.log import SimLog, SimLogFormatter
+from cocotb.queue import Queue, QueueFull
+from cocotb.triggers import RisingEdge, FallingEdge, Timer, Event
+from cocotb.clock import Clock
+from scapy.all import Packet, BitField
+from typing import List, NamedTuple, Union
+from cocotb.regression import TestFactory
+import numpy as np
+
+sys.path.append('../../common')
+from bus.tlp_adap_dma_bus import DmaReadBus
+from monitors.tlp_adap_dma_bus import DmaRam
+from address_space import Pool, AddressSpace,MemoryRegion
+from enum import Enum, unique
+import ding_robot
+
+
+from define_virtio_nettx import * 
+from nettx_data_vq import * 
+
+
+class ram_callback(object): 
+    def _SlotCtx(self, req_obj):
+        qid = int(int(req_obj.req_qid)%256)
+        rsp = SlotCtxRspTransaction()
+        rsp.rsp_dev_id = self.dev_id_arrary[qid]
+        rsp.rsp_qos_unit = self.qos_unit_arrary[qid]
+        rsp.rsp_qos_enable = self.qos_enable_arrary[qid]
+        return rsp  
+
+    def _RdDataCtx(self, req_obj):
+        qid = int(int(req_obj.req_qid)%256)
+        rsp = RdDataCtxRspTransaction()
+        rsp.rsp_forced_shutdown = self.shutdown_arrary[qid]
+        rsp.rsp_qos_unit = self.qos_unit_arrary[qid]
+        rsp.rsp_qos_enable = self.qos_enable_arrary[qid]
+        rsp.rsp_bdf = self.bdf_arrary[qid]
+        rsp.rsp_tso_en = self.tso_en[qid]
+        rsp.rsp_csum_en = self.csum_en[qid]
+        rsp.rsp_gen = self.gen[qid]
+
+        return rsp        
+
+class TB(ram_callback):
+
+    def __init__(self, dut,set_desc_err,set_force_down):
+        self.dut = dut
+        self.log = SimLog("cocotb.tb")
+        self.log.setLevel(logging.DEBUG)
+        cocotb.start_soon(Clock(dut.clk, 4, units="ns").start())
+        self.mem = Pool(None, 0, size=2**64, min_alloc=64)
+
+        self.HostRdDma = DmaRam(None, DmaReadBus.from_prefix(dut, "dma"), dut.clk, dut.rst, mem=self.mem)
+        self.SlotCtx = SlotCtxRspRdTbl(SlotCtxReqBus.from_prefix(dut, "slot_ctrl_ctx_info_rd"), SlotCtxRspBus.from_prefix(dut, "slot_ctrl_ctx_info_rd"), None,dut.clk, dut.rst,True,1)
+        self.SlotCtx.set_callback(self._SlotCtx)
+
+        self.RdDataCtx = RdDataCtxRspRdTbl(RdDataCtxReqBus.from_prefix(dut, "rd_data_ctx_info_rd"), RdDataCtxRspBus.from_prefix(dut, "rd_data_ctx_info_rd"), None,dut.clk, dut.rst,True,1)
+        self.RdDataCtx.set_callback(self._RdDataCtx)
+
+        self.SlotReq = SlotReqSink(SlotReqBus.from_prefix(dut, "nettx_alloc_slot_req"), dut.clk, dut.rst)
+        self.SlotReq.queue_occupancy_limit = 2
+        self.SlotRsp = SlotRspSource(SlotRspBus.from_prefix(dut, "nettx_alloc_slot_rsp"), dut.clk, dut.rst)
+
+        self.SchReq = SchReqSource(SchReqBus.from_prefix(dut, "sch_req"), dut.clk, dut.rst)
+        #self.NotifyRsp = NotifyRspSink(NotifyRspBus.from_prefix(dut, "notify_rsp"), dut.clk, dut.rst)
+        #self.NotifyRsp.queue_occupancy_limit = 2
+
+        self.DescRsp = NettxDescSource(NettxDescBus.from_prefix(dut, "nettx_desc_rsp"), dut.clk, dut.rst)
+
+
+        self.QosQueryReq = QosQueryReqSink(QosQueryReqBus.from_prefix(dut, "qos_query_req"), dut.clk, dut.rst)
+        self.QosQueryReq.queue_occupancy_limit = 2
+        self.QosQueryRsp = QosQueryRspSource(QosQueryRspBus.from_prefix(dut, "qos_query_rsp"), dut.clk, dut.rst)
+
+        self.QosUpdata = QosUpdataSink(QosUpdataBus.from_prefix(dut, "qos_update"), dut.clk, dut.rst)
+        self.QosUpdata.queue_occupancy_limit = 2
+
+
+        self.UsedInfo = UsedInfoSink(UsedInfoBus.from_prefix(dut, "used_info"), dut.clk, dut.rst)
+        self.UsedInfo.queue_occupancy_limit = 2
+
+        self.net2tso = Net2TsoSink(Net2TsoBus.from_prefix(dut, "net2tso"), dut.clk, dut.rst)
+        self.net2tso.queue_occupancy_limit = 2
+        
+        self.set_desc_err = set_desc_err
+        self.set_force_down = set_force_down
+        self.qos_unit_arrary={}
+        self.qos_enable_arrary={}
+        self.bdf_arrary={}
+        self.dev_id_arrary={}
+        self.shutdown_arrary ={}
+        self.tso_en ={}
+        self.csum_en ={}
+        self.gen ={}
+
+        self.q_desc = []
+        self.q_chain_num = []
+        self.q_desc_num = []
+        self.q_chain_data_len = []
+        self.q_checkout_qos_len = []
+        self.q_updata_qos_len = []
+        self.q_desc_data_len = []
+        self.ring_id =[]
+        self.q_notify = Queue(maxsize = 1024)
+        self.q_checkout = Queue(maxsize = 1024)
+        self.rcv_data = Queue(maxsize = 4096)
+        self.rcv_ctrl = Queue(maxsize = 4096)
+        self.q_notify_rsp = Queue(maxsize = 16)
+
+        self.rcv_notify = Queue(maxsize = 4096)
+
+        #self.qid_desc_filter =qid_desc_filter(self.q_notify_rsp)
+
+        for qid in range(256) :   
+            self.qos_unit_arrary[qid]=qid   
+            self.tso_en[qid]=0   
+            self.csum_en[qid]=0    
+            self.gen[qid]=0  
+            self.qos_enable_arrary[qid]= int(qid%2)
+            self.bdf_arrary[qid] = qid
+            self.dev_id_arrary[qid] = qid
+            self.shutdown_arrary[qid] = 0
+            self.q_desc.append(Queue(maxsize = 65536))
+            self.q_chain_num.append(Queue(maxsize = 65536))
+            self.q_desc_num.append(0)
+            self.ring_id.append(Queue(maxsize = 65536))
+            self.q_chain_data_len.append(Queue(maxsize = 65536))
+            self.q_desc_data_len.append (0)
+            self.q_checkout_qos_len.append(0)
+            self.q_updata_qos_len.append(0)
+
+        cocotb.start_soon(self._send_notify()) 
+        cocotb.start_soon(self._rcv_data())
+        cocotb.start_soon(self._checkout_qos_update())
+        cocotb.start_soon(self._proc_slot_req())
+        cocotb.start_soon(self._proc_qos_query())
+
+    async def cycle_reset(self):
+        self.dut.rst.setimmediatevalue(0)
+        await RisingEdge(self.dut.clk)
+        await RisingEdge(self.dut.clk)
+        self.dut.rst.value = 1
+        await RisingEdge(self.dut.clk)
+        await RisingEdge(self.dut.clk)
+        self.dut.rst.value = 0
+        await RisingEdge(self.dut.clk)
+        await RisingEdge(self.dut.clk)
+        await Timer(2, "us")
+
+    async def _wr_desc(self,qid,addr,len,flag_next,flag_write_only,flag_indirect,next_index):      
+        desc_pack = virtio_desc (next_index = next_index,
+                                        flag_rsv = 0,
+                                        flag_indirect = flag_indirect,
+                                        flag_write = flag_write_only,
+                                        flag_next = flag_next ,
+                                        len = len,
+                                        addr = addr
+                                        ).pack()
+        self.q_desc_num[qid] = self.q_desc_num[qid] + 1
+        self.q_desc_data_len[qid] =  self.q_desc_data_len[qid] + len
+        if(flag_next == 0): 
+            await self.q_chain_num[qid].put(self.q_desc_num[qid])
+            await self.q_chain_data_len[qid].put(self.q_desc_data_len[qid])
+            self.q_desc_num[qid] = 0
+            self.q_desc_data_len[qid] = 0
+        await self.q_desc[qid].put(desc_pack)
+
+
+    async def _wr_ring_id(self,qid,ring_id):    
+        await self.ring_id[qid].put(ring_id)
+        
+    async def _rcv_notify(self,qid):
+        await self.rcv_notify.put(qid)
+
+
+    async def _send_notify(self):
+        while True:
+            qid = await self.rcv_notify.get()         
+            sch_req = self.SchReq._transaction_obj()
+            sch_req.qid = qid
+            await self.SchReq.send(sch_req)
+            
+
+    async def _rcv_data(self):
+        err = 0
+        while True:
+            rcv_data = await self.net2tso.recv()
+            data_byte_array =int(rcv_data.data).to_bytes(32, byteorder="little")
+            if(int(rcv_data.err) > 0):
+                err = 1
+            if(rcv_data.eop):
+                await self.rcv_ctrl.put((rcv_data.len,rcv_data.qid,rcv_data.gen,rcv_data.tso_en,rcv_data.csum_en,err) )
+                err = 0
+            await self.rcv_data.put((data_byte_array,rcv_data.sop,rcv_data.eop,rcv_data.sty,rcv_data.mty))
+
+    async def _get_data(self):
+        (data,sop,eop,sty,mty) = await self.rcv_data.get()
+        return(data,sop,eop,sty,mty)
+
+    async def _get_ctrl(self):   
+        (len,qid,gen,tso_en,csum_en,err) = await self.rcv_ctrl.get()
+        return(len,qid,gen,tso_en,csum_en,err)
+
+    async def _checkout_used_info(self):
+            used_info = await self.UsedInfo.recv()
+            used_info_unpack = used_info_pack().unpack(used_info.data)
+            return(used_info_unpack.force_down,used_info_unpack.err_info,used_info_unpack.qid,used_info_unpack.len,used_info_unpack.id,used_info_unpack.used_idx)
+
+    async def _checkout_qos_update(self):
+            while True:
+                qos_update = await self.QosUpdata.recv()
+                self.q_updata_qos_len[qos_update.uid] = self.q_updata_qos_len[qos_update.uid] + qos_update.len
+
+    async def _proc_slot_req(self):
+        while True:
+            slot_req = await self.SlotReq.recv()
+            global_qid = int(slot_req.data)
+            qid = int(global_qid%256)
+            typ = int(global_qid/256)
+            assert typ == 0
+            dev_id = int(slot_req.dev_id)
+            if self.set_desc_err[qid] == 1 :
+                if random.randint(1, 100) < 50:
+                    err_info = 0x98
+                else:
+                    err_info = 0
+            else :
+                err_info = 0
+
+            if self.set_force_down[qid] == 1 :
+                if random.randint(1, 100) < 50:
+                    force_down = 1
+                    self.shutdown_arrary[qid] = 1
+                else:
+                    force_down = 0
+                    self.shutdown_arrary[qid] = 0
+            else :
+                force_down = 0
+                self.shutdown_arrary[qid] = 0
+
+
+            if(self.q_chain_num[qid].empty() == False) :
+                slot_rsp = self.SlotRsp._transaction_obj()
+                slot_rsp.data = virtio_desc_eng_slot_rsp( qid= qid,
+                                                 pkt_id = 0 ,
+                                                 ok = 1,
+                                                 local_ring_empty = 0,
+                                                 avail_ring_empty = 0,
+                                                 q_stat_doing = 1,
+                                                 q_stat_stopping = 0,
+                                                 desc_engine_limit = random.randint(0,1),
+                                                 err_info = err_info ).pack()
+
+                await self.SlotRsp.send(slot_rsp)
+
+                chain_num = await self.q_chain_num[qid].get()
+                ring_id = await self.ring_id[qid].get()
+                chain_len = await self.q_chain_data_len[qid].get()
+                if(chain_len > 12):
+                    self.q_checkout_qos_len[qid] = self.q_checkout_qos_len[qid] + chain_len -12
+                else :
+                    self.q_checkout_qos_len[qid] = self.q_checkout_qos_len[qid] + chain_len
+                cnt_desc = 0
+                while (cnt_desc < chain_num):
+                    desc_rsp = self.DescRsp._transaction_obj()
+                    if(cnt_desc == 0) : 
+                        desc_rsp.sop = 1
+                    else :
+                        desc_rsp.sop = 0
+
+                    if(cnt_desc == chain_num - 1):       
+                        desc_rsp.eop = 1
+                    else :
+                        desc_rsp_eop = 0
+
+                    desc_rsp.sbd = virtio_desc_eng_desc_rsp_sbd(qid = qid,
+                                                            dev_id = qid,
+                                                            pkt_id = 0,
+                                                            total_buf_length = chain_len,
+                                                            valid_desc_cnt = chain_num,
+                                                            ring_id = ring_id,
+                                                            avail_idx = ring_id,
+                                                            forced_shutdown = force_down,
+                                                            err_info = err_info
+                     
+                                                             ).pack()
+
+                    desc_rsp.data = await self.q_desc[qid].get()
+                    cnt_desc = cnt_desc + 1
+
+                    await self.DescRsp.send(desc_rsp)
+            elif(self.q_chain_num[qid].empty() == True) :
+                slot_rsp = self.SlotRsp._transaction_obj()
+                slot_rsp.data = virtio_desc_eng_slot_rsp( qid= qid,
+                                                 pkt_id = 0 ,
+                                                 ok = 1,
+                                                 local_ring_empty = 1,
+                                                 avail_ring_empty = 0,
+                                                 q_stat_doing = 1,
+                                                 q_stat_stopping = 0,
+                                                 desc_engine_limit = random.randint(0,1),
+                                                 err_info = 0 ).pack()
+
+                await self.SlotRsp.send(slot_rsp)
+
+
+    async def _proc_qos_query(self):
+        while True:
+            qos_req = await self.QosQueryReq.recv()
+            qos_rsp = self.QosQueryRsp._transaction_obj()
+            qos_rsp.data = random.randint(0,1)
+            await self.QosQueryRsp.send(qos_rsp)
+
+
+    def set_idle_generator(self, generator=None):   
+        if generator:
+
+            self.UsedInfo.set_idle_generator(generator)
+            self.HostRdDma.set_idle_generator(generator)   
+            self.net2tso.set_idle_generator(generator) 
+            self.SlotReq.set_idle_generator(generator)   
+            self.QosQueryReq.set_idle_generator(generator)
+            self.QosUpdata.set_idle_generator(generator)
+        
+            self.SlotRsp.set_idle_generator(generator)
+            self.DescRsp.set_idle_generator(generator)
+            self.QosQueryRsp.set_idle_generator(generator)
+
+
+    def set_backpressure_generator(self, generator=None):
+        if generator:
+            self.UsedInfo.set_backpressure_generator(generator)
+            self.HostRdDma.set_backpressure_generator(generator)   
+            self.net2tso.set_backpressure_generator(generator) 
+            self.SlotReq.set_backpressure_generator(generator)   
+            self.QosQueryReq.set_backpressure_generator(generator)
+            self.QosUpdata.set_backpressure_generator(generator)
+
+            self.SlotRsp.set_backpressure_generator(generator)
+            self.DescRsp.set_backpressure_generator(generator)
+            self.QosQueryRsp.set_backpressure_generator(generator)
+
+
+
+
+async def run_test(dut,idle_inserter,backpressure_inserter):
+  
+    qnum = 32
+    have_chain = 1#have chain : 0、no_chain  1、chain  2、mix
+    nettx_set_tlp_err = 1
+    nettx_set_desc_err = 1
+    nettx_set_force_down = 1
+    
+    qids = random.sample(range(0, 256), qnum)
+  
+
+    set_desc_err = [0 for i in range(256)]
+    if(nettx_set_desc_err == 1) :
+        desc_err_num = 0
+        set_desc_err[qids[desc_err_num]] = 1
+
+    set_tlp_err = [0 for i in range(len(qids))]
+    if(nettx_set_tlp_err == 1) :
+        tlp_err_num =1
+        set_tlp_err[tlp_err_num] = 1
+
+    set_force_down = [0 for i in range(256)]
+    if(nettx_set_force_down == 1) :
+        force_down_num = 2
+        set_force_down[qids[force_down_num]] = 1
+
+    tb = TB(dut,set_desc_err,set_force_down)  
+    tb.set_idle_generator(idle_inserter)
+    tb.set_backpressure_generator(backpressure_inserter)
+    await tb.cycle_reset() 
+    await Timer(4100, 'ns')#wait reset ram
+  
+
+
+   
+    await startTest(tb, qnum=qnum, qids=qids,testNum=1, testType=TestType.NETTX, have_chain = have_chain , set_tlp_err = set_tlp_err,testCases=
+                  [testcase_send_a_little_pkts])
+
+    for i in range(len(qids)):
+        if(set_tlp_err[i] == 0 and set_force_down[qids[i]] == 0 and set_desc_err[qids[i]] == 0 ):
+            if(tb.qos_enable_arrary[qids[i]] == 1):
+                assert tb.q_checkout_qos_len[qids[i]] == tb.q_updata_qos_len[qids[i]]
+            else :
+                assert tb.q_updata_qos_len[qids[i]] == 0
+  
+    await Timer(40000, 'ns')
+
+def cycle_pause():
+    seed = [1 if i < 300 else 0 for i in range(1000)]
+    random.shuffle(seed)
+    seed = seed + [1 for _ in range(100)]
+    return itertools.cycle(seed)
+    
+ding_robot.ding_robot()
+
+if cocotb.SIM_NAME:
+    for test in [run_test]:
+        factory = TestFactory(test)
+        factory.add_option("idle_inserter", [None, cycle_pause])
+        factory.add_option("backpressure_inserter", [None, cycle_pause])
+        factory.generate_tests()

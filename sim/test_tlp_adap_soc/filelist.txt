@@ -1,0 +1,3 @@
+-F ../../src/tlp_adaptor/rtl.f
+-F ../../common/rtl.f
+tlp_adap_soc_tb.sv

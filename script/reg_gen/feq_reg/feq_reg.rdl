@@ -1,0 +1,67 @@
+`include "../common/common64.rdlh"
+addrmap feq_reg{
+    reg dfx_err{
+        woclr_field dfx_err[63:0] = 0;
+    };
+    dfx_err dfx_err0 @0x0;
+    dfx_err dfx_err1 @0x8;
+    dfx_err dfx_err2 @0x10;
+    dfx_err dfx_err3 @0x18;
+
+    reg dfx_status{
+        hwsts_field dfx_status[63:0] = 0;
+    };
+    dfx_status dfx_status0 @0x100;
+    dfx_status dfx_status1 @0x108;
+    dfx_status dfx_status2 @0x110;
+    dfx_status dfx_status3 @0x118;
+
+    reg dfx_cnt{
+        hwsts_field dfx_cnt[63:0] = 0;
+    };
+    dfx_cnt dfx_cnt0 @0x200;
+    dfx_cnt dfx_cnt1 @0x208;
+    dfx_cnt dfx_cnt2 @0x210;
+    dfx_cnt dfx_cnt3 @0x218;
+    dfx_cnt dfx_cnt4 @0x220;
+    dfx_cnt dfx_cnt5 @0x228;
+    dfx_cnt dfx_cnt6 @0x230;
+    dfx_cnt dfx_cnt7 @0x238;
+
+
+
+    reg dfx_ram_data{
+        hwsts_field dfx_ram_data[63:0] = 0;
+    };
+    dfx_ram_data dfx_ram_data0 @0x300;
+    dfx_ram_data dfx_ram_data1 @0x308;
+    dfx_ram_data dfx_ram_data2 @0x310;
+    dfx_ram_data dfx_ram_data3 @0x318;
+    dfx_ram_data dfx_ram_data4 @0x320;
+    dfx_ram_data dfx_ram_data5 @0x328;
+    dfx_ram_data dfx_ram_data6 @0x330;
+    dfx_ram_data dfx_ram_data7 @0x338;
+    dfx_ram_data dfx_ram_data8 @0x340;
+    dfx_ram_data dfx_ram_data9 @0x348;
+    dfx_ram_data dfx_ram_data10 @0x350;
+    dfx_ram_data dfx_ram_data11 @0x358;
+    dfx_ram_data dfx_ram_data12 @0x360;
+    dfx_ram_data dfx_ram_data13 @0x368;
+    dfx_ram_data dfx_ram_data14 @0x370;
+    dfx_ram_data dfx_ram_data15 @0x378;
+
+    reg dfx_threshold{
+        swmod_field dfx_threshold[31:0] = 0;
+    };
+    dfx_threshold dfx_threshold0 @0x400;
+    dfx_threshold dfx_threshold1 @0x408;
+    dfx_threshold dfx_threshold2 @0x410;
+    dfx_threshold dfx_threshold3 @0x418;
+    dfx_threshold dfx_threshold4 @0x420;
+    dfx_threshold dfx_threshold5 @0x428;
+    dfx_threshold dfx_threshold6 @0x430;
+    dfx_threshold dfx_threshold7 @0x438;
+
+
+  
+};

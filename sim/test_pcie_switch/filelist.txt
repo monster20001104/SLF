@@ -1,0 +1,5 @@
+-F ../../src/tlp_adaptor/rtl.f
+-F ../../common/rtl.f
+-F ../../src/pcie_switch/rtl.f
+pcie_switch_tb.sv
+

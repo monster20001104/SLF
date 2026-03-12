@@ -1,0 +1,8 @@
++incdir+../../../src/virtio2/.
++incdir+../../../src/tlp_adaptor/.
+-F ../../../src/tlp_adaptor/rtl.f
+-F ../../../common/rtl.f
+-F ../../../src/virtio2/virtio_desc_engine/rtl.f
+-F ../../../src/virtio2/virtio_blk_desc_engine/rtl.f
+../../../src/virtio2/common/virtio_sch.sv
+virtio_blk_desc_engine_tb.sv

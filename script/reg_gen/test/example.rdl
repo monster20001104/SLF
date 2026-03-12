@@ -1,0 +1,30 @@
+`include "../common/common.rdlh"
+
+addrmap test{
+    reg test1{
+        swcfg_field test1[31:0] = 0;
+    };
+    test1 test1 @0x4;
+
+    reg test2{
+        swmod_field test2[31:0] = 0;
+    };
+    test2 test2 @0x8;
+
+
+    reg test3{
+        swcfg_hwclr_field test2[31:0] = 0;
+    };
+    test3 test3 @0xc;
+
+
+    reg test4{
+        hwsts_field test3[31:0] = 0;
+    };
+    test4 test4 @0x10;
+
+    reg test5{
+        woclr_field test3[31:0] = 0;
+    };
+    test5 test5 @0x14;
+};

@@ -1,0 +1,4 @@
+-F ../../src/tlp_adaptor/rtl.f
+-F ../../common/rtl.f
+-F ../../src/sgdma/rtl.f
+sgdma_tb.sv

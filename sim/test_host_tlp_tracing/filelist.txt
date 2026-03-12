@@ -1,0 +1,3 @@
+-F ../../src/tlp_adaptor/rtl.f
+-F ../../common/rtl.f
+host_tlp_tracing_tb.sv

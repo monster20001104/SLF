@@ -1,0 +1,10 @@
+
+../../../common/reg_idx_tbl/reg_idx_tbl.sv
+../../../common/interfaces/mlite_if.svh
+../../../common/oh_to_idx.sv
+../../../common/single_port_ram.sv
+reg_idx_tbl_tb.sv
+
+/eda_tools/intelFPGA_pro/24.1/quartus/eda/sim_lib/altera_mf.v
+/eda_tools/intelFPGA_pro/24.1/quartus/eda/sim_lib/altera_lnsim.sv
+/eda_tools/intelFPGA_pro/24.1/quartus/eda/sim_lib/twentynm_atoms.v

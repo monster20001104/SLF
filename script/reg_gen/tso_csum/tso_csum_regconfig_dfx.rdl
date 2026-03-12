@@ -1,0 +1,29 @@
+`include "../common/common64.rdlh"
+
+addrmap tso_csum_regconfig_dfx{
+    reg tso_control{
+        swcfg_field tso_control[0:0] = 1;
+    }; 
+    tso_control tso_control @0x0;
+
+    reg csum_control{
+        swcfg_field csum_control[0:0] = 1;
+    }; 
+    csum_control csum_control @0x8;
+
+    reg tso_csum_err{
+        woclr_field tso_csum_err[63:0] = 0;
+    };
+    tso_csum_err tso_csum_err @0x1000;
+    
+    reg tso_csum_stat{
+        hwsts_field tso_csum_stat[63:0] = 0;
+    };
+    tso_csum_stat tso_csum_stat @0x1100;
+
+    reg tso_csum_cnt{
+        woclr_field tso_csum_cnt[63:0] = 0;
+    }; 
+    tso_csum_cnt tso_csum_cnt @0x1200;
+
+};

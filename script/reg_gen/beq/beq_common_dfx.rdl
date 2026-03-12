@@ -1,0 +1,120 @@
+`include "../common/common64.rdlh"
+addrmap beq_common_dfx{
+    reg dfx_ctx_err{
+        woclr_field dfx_ctx_err[23:0] = 0;
+    };
+    dfx_ctx_err dfx_ctx_err @0x0;
+
+    reg dfx_err_handler_err{
+        woclr_field dfx_err_handler_err[3:0] = 0;
+    };
+    dfx_err_handler_err dfx_err_handler_err @0x8;
+
+    reg dfx_rr_sch_err{
+        woclr_field dfx_rr_sch_err[13:0] = 0;
+    };
+    dfx_rr_sch_err dfx_rr_sch_err @0x10;
+
+    reg dfx_wrr_sch_err{
+        woclr_field dfx_wrr_sch_err[11:0] = 0;
+    };
+    dfx_wrr_sch_err dfx_wrr_sch_err @0x18;
+
+    reg dfx_feq2bid_err{
+        woclr_field dfx_feq2bid_err[3:0] = 0;
+    };
+    dfx_feq2bid_err dfx_feq2bid_err @0x20;
+
+    reg dfx_beq_mon_err{
+        woclr_field dfx_beq_mon_err[5:0] = 0;
+    };
+    dfx_beq_mon_err dfx_beq_mon_err @0x28;
+
+    reg dfx_ctx_status{
+        hwsts_field dfx_ctx_status[18:0] = 0;
+    };
+    dfx_ctx_status dfx_ctx_status @0x40;
+
+    reg dfx_err_handler_status{
+        hwsts_field dfx_err_handler_status[1:0] = 0;
+    };
+    dfx_err_handler_status dfx_err_handler_status @0x48;
+
+    reg dfx_rr_sch_status{
+        hwsts_field dfx_rr_sch_status[11:0] = 0;
+    };
+    dfx_rr_sch_status dfx_rr_sch_status @0x50;
+
+    reg dfx_wrr_sch_status{
+        hwsts_field dfx_wrr_sch_status[18:0] = 0;
+    };
+    dfx_wrr_sch_status dfx_wrr_sch_status @0x58;
+
+    reg dfx_feq2bid_status{
+        hwsts_field dfx_feq2bid_status[6:0] = 0;
+    };
+    dfx_feq2bid_status dfx_feq2bid_status @0x60;
+
+    reg dfx_rr_sch_notify_cnt{
+        hwsts_field dfx_rr_sch_notify_cnt[15:0] = 0;
+    };
+    dfx_rr_sch_notify_cnt dfx_rr_sch_notify_cnt @0x100;
+
+    reg dfx_wrr_sch_notify_cnt{
+        hwsts_field dfx_wrr_sch_notify_cnt[15:0] = 0;
+    };
+    dfx_wrr_sch_notify_cnt dfx_wrr_sch_notify_cnt @0x108;
+
+    reg dfx_beq2user0_backpressure_cnt{
+        hwsts_field dfx_beq2user0_backpressure_cnt[63:0] = 0;
+    };
+    dfx_beq2user0_backpressure_cnt dfx_beq2user0_backpressure_cnt @0x110;
+
+    reg dfx_beq2user1_backpressure_cnt{
+        hwsts_field dfx_beq2user1_backpressure_cnt[63:0] = 0;
+    };
+    dfx_beq2user1_backpressure_cnt dfx_beq2user1_backpressure_cnt @0x118;
+
+    reg dfx_beq2user2_backpressure_cnt{
+        hwsts_field dfx_beq2user2_backpressure_cnt[63:0] = 0;
+    };
+    dfx_beq2user2_backpressure_cnt dfx_beq2user2_backpressure_cnt @0x120;
+
+    reg dfx_beq2user3_backpressure_cnt{
+        hwsts_field dfx_beq2user3_backpressure_cnt[63:0] = 0;
+    };
+    dfx_beq2user3_backpressure_cnt dfx_beq2user3_backpressure_cnt @0x128;
+
+    reg dfx_user2beq0_backpressure_cnt{
+        hwsts_field dfx_user2beq0_backpressure_cnt[63:0] = 0;
+    };
+    dfx_user2beq0_backpressure_cnt dfx_user2beq0_backpressure_cnt @0x130;
+
+    reg dfx_user2beq1_backpressure_cnt{
+        hwsts_field dfx_user2beq1_backpressure_cnt[63:0] = 0;
+    };
+    dfx_user2beq1_backpressure_cnt dfx_user2beq1_backpressure_cnt @0x138;
+
+    reg dfx_user2beq2_backpressure_cnt{
+        hwsts_field dfx_user2beq2_backpressure_cnt[63:0] = 0;
+    };
+    dfx_user2beq2_backpressure_cnt dfx_user2beq2_backpressure_cnt @0x140;
+
+    reg dfx_user2beq3_backpressure_cnt{
+        hwsts_field dfx_user2beq3_backpressure_cnt[63:0] = 0;
+    };
+    dfx_user2beq3_backpressure_cnt dfx_user2beq3_backpressure_cnt @0x148;
+
+    reg rr_sch_weight{
+        swcfg_field rr_sch_weight[7:0] = 8'h12;
+    };
+    rr_sch_weight rr_sch_weight @0x800;
+
+    reg wrr_sch_weight{
+        swcfg_field wrr_sch_weight[15:0] = 16'h2114;
+    };
+    wrr_sch_weight wrr_sch_weight @0x810;
+
+
+
+};

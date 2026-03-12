@@ -1,0 +1,152 @@
+`include "../common/common64.rdlh"
+addrmap beq_txq_dfx{
+    reg dfx_err{
+        woclr_field dfx_err[9:0] = 0;
+    };
+    dfx_err dfx_err @0x0;
+
+    reg dfx_txq_data_err{
+        woclr_field dfx_txq_data_err[12:0] = 0;
+    };
+    dfx_txq_data_err dfx_txq_data_err @0x8;
+
+    reg dfx_req_desc_err{
+        woclr_field dfx_req_desc_err[7:0] = 0;
+    };
+    dfx_req_desc_err dfx_req_desc_err @0x10;
+
+    reg dfx_status{
+        hwsts_field dfx_status[27:0] = 0;
+    };
+    dfx_status dfx_status @0x40;
+
+    reg dfx_txq_data_status{
+        hwsts_field dfx_txq_data_status[3:0] = 0;
+    };
+    dfx_txq_data_status dfx_txq_data_status @0x48;
+
+    reg dfx_req_desc_status{
+        hwsts_field dfx_req_desc_status[33:0] = 0;
+    };
+    dfx_req_desc_status dfx_req_desc_status @0x50;
+
+    reg dfx_data_cnt{
+        hwsts_field dfx_data_cnt[23:0] = 0;
+    };
+    dfx_data_cnt dfx_data_cnt @0x100;
+
+    reg rd_ndesc_cnt{
+        hwsts_field rd_ndesc_cnt[15:0] = 0;
+    };
+    rd_ndesc_cnt rd_ndesc_cnt @0x108;
+
+    reg dma_cnt{
+        hwsts_field dma_cnt[31:0] = 0;
+    };
+    dma_cnt dma_cnt @0x110;
+
+    reg beq2user_cnt{
+        hwsts_field beq2user_cnt[31:0] = 0;
+    };
+    beq2user_cnt beq2user_cnt @0x118;
+
+    reg emu_wr_rd_cnt{
+        hwsts_field emu_wr_rd_cnt[63:0] = 0;
+    };
+    emu_wr_rd_cnt emu_wr_rd_cnt @0x120;
+
+    reg blk_wr_rd_cnt{
+        hwsts_field blk_wr_rd_cnt[63:0] = 0;
+    };
+    blk_wr_rd_cnt blk_wr_rd_cnt @0x128;
+
+    reg sgdma_wr_rd_cnt{
+        hwsts_field sgdma_wr_rd_cnt[63:0] = 0;
+    };
+    sgdma_wr_rd_cnt sgdma_wr_rd_cnt @0x130;
+    
+    reg emu_err_drop_cnt{
+        hwsts_field emu_err_drop_cnt[23:0] = 0;
+    };
+    emu_err_drop_cnt emu_err_drop_cnt @0x138;
+
+    reg blk_err_drop_cnt{
+        hwsts_field blk_err_drop_cnt[23:0] = 0;
+    };
+    blk_err_drop_cnt blk_err_drop_cnt @0x140;
+
+    reg sgdma_err_drop_cnt{
+        hwsts_field sgdma_err_drop_cnt[23:0] = 0;
+    };
+    sgdma_err_drop_cnt sgdma_err_drop_cnt @0x148;
+
+    reg emu_produce_consumer_diff{
+        hwsts_field emu_produce_consumer_diff[23:0] = 0;
+    };
+    emu_produce_consumer_diff emu_produce_consumer_diff @0x150;
+
+    reg blk_produce_consumer_diff{
+        hwsts_field blk_produce_consumer_diff[23:0] = 0;
+    };
+    blk_produce_consumer_diff blk_produce_consumer_diff @0x158;
+
+    reg sgdma_produce_consumer_diff{
+        hwsts_field sgdma_produce_consumer_diff[23:0] = 0;
+    };
+    sgdma_produce_consumer_diff sgdma_produce_consumer_diff @0x160;
+
+    reg net_bps_cbs_cnt{
+        hwsts_field net_bps_cbs_cnt[18:0] = 0;
+    };
+    net_bps_cbs_cnt net_bps_cbs_cnt @0x168;
+
+    reg net_pps_cbs_cnt{
+        hwsts_field net_pps_cbs_cnt[17:0] = 0;
+    };
+    net_pps_cbs_cnt net_pps_cbs_cnt @0x170;
+
+    reg emu_fifo_cap{
+        swcfg_field emu_fifo_cap[8:0] = 24;
+    };
+    emu_fifo_cap emu_fifo_cap @0x200;
+
+    reg blk_fifo_cap{
+        swcfg_field blk_fifo_cap[8:0] = 384;
+    };
+    blk_fifo_cap blk_fifo_cap @0x208;
+
+    reg sgdma_fifo_cap{
+        swcfg_field sgdma_fifo_cap[8:0] = 384;
+    };
+    sgdma_fifo_cap sgdma_fifo_cap @0x210;
+
+    reg net_bps_cir{
+        swcfg_field net_bps_cir[18:0] = 410;
+    };
+    net_bps_cir net_bps_cir @0x218;
+
+    reg net_bps_cbs{
+        swcfg_field net_bps_cbs[18:0] = 4100;
+    };
+    net_bps_cbs net_bps_cbs @0x220;
+
+    reg net_pps_cir{
+        swcfg_field net_pps_cir[17:0] = 190;
+    };
+    net_pps_cir net_pps_cir @0x228;
+
+    reg net_pps_cbs{
+        swcfg_field net_pps_cbs[17:0] = 1900;
+    };
+    net_pps_cbs net_pps_cbs @0x230;
+
+    reg cred_fc_enable{
+        swcfg_field cred_fc_enable = 1;
+    };
+    cred_fc_enable cred_fc_enable @0x238;
+
+    reg inflight_data_cnt{
+        swcfg_field inflight_data_cnt[11:0] = 400;
+    };
+    inflight_data_cnt inflight_data_cnt @0x300;
+};

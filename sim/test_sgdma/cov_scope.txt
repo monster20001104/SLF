@@ -1,0 +1,4 @@
++tree sgdma_tb.u_sgdma 0
+-module yucca_sync_fifo
+-module scfifo
+-module ALTERA_DEVICE_FAMILIES

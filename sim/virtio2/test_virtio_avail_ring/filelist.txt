@@ -1,0 +1,8 @@
+
+-F ../../../src/tlp_adaptor/rtl.f
+-F ../../../common/rtl.f
++incdir+../../../src/virtio2/.
+-F ../../../src/virtio2/virtio_avail_ring/rtl.f
+-F ../../../src/virtio2/common/rtl.f
+sim.svh
+virtio_avail_ring_tb.sv

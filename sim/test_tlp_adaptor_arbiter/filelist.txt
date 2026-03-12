@@ -1,0 +1,4 @@
+-F ../../common/rtl.f
+-F ../../src/tlp_adaptor/rtl.f
+-F ../../src/tlp_adap_arbiter/rtl.f
+tlp_adaptor_arbiter_tb.sv

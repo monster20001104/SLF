@@ -1,0 +1,704 @@
+     0.00ns INFO     cocotb.regression                  Found test test_virtio_nettx_tb.run_test_001
+     0.00ns INFO     cocotb.regression                  [34mrunning[49m[39m run_test_001 (1/1)
+                                                          Automatically generated test
+     0.00ns INFO     cocotb.virtio_nettx_tb.sch_req     Reset de-asserted
+     0.00ns INFO     ..io_nettx_tb.nettx_alloc_slot_req Reset de-asserted
+     0.00ns INFO     ..io_nettx_tb.nettx_alloc_slot_rsp Reset de-asserted
+     0.00ns INFO     ..o_nettx_tb.slot_ctrl_ctx_info_rd Reset de-asserted
+     0.00ns INFO     ..tb.virtio_nettx_tb.qos_query_req Reset de-asserted
+     0.00ns INFO     ..tb.virtio_nettx_tb.qos_query_rsp Reset de-asserted
+     0.00ns INFO     cocotb.virtio_nettx_tb.qos_update  Reset de-asserted
+     0.00ns INFO     ..b.virtio_nettx_tb.nettx_desc_rsp Reset de-asserted
+     0.00ns INFO     ..tio_nettx_tb.rd_data_ctx_info_rd Reset de-asserted
+     0.00ns INFO     cocotb.virtio_nettx_tb.net2tso     Reset de-asserted
+     0.00ns INFO     cocotb.virtio_nettx_tb.used_info   Reset de-asserted
+     0.00ns INFO     cocotb.virtio_nettx_tb.dma         Reset de-asserted
+     0.00ns INFO     cocotb.virtio_nettx_tb.dma         Reset de-asserted
+     0.00ns INFO     cocotb.reg_0x0_0x10000000000000000 tlp adap DMA slaver configuration:
+     0.00ns INFO     cocotb.reg_0x0_0x10000000000000000   Address width: 64 bits
+     0.00ns INFO     cocotb.reg_0x0_0x10000000000000000   Byte size: 8 bits
+     0.00ns INFO     cocotb.reg_0x0_0x10000000000000000   Data width: 256 bits (32 bytes)
+     0.00ns INFO     cocotb.reg_0x0_0x10000000000000000   Max burst size: 4096 bytes
+     0.00ns INFO     cocotb.reg_0x0_0x10000000000000000 Reset de-asserted
+     0.00ns ERROR    cocotb.tb                          Test QIDs:[158, 215, 37, 7, 135, 98, 216, 17, 10, 100]
+     0.00ns INFO     cocotb.tb                          seed: 1768551146
+     5.00ns INFO     cocotb.virtio_nettx_tb.sch_req     Reset asserted
+     5.00ns INFO     ..io_nettx_tb.nettx_alloc_slot_req Reset asserted
+     5.00ns INFO     ..io_nettx_tb.nettx_alloc_slot_rsp Reset asserted
+     5.00ns INFO     ..o_nettx_tb.slot_ctrl_ctx_info_rd Reset asserted
+     5.00ns INFO     ..tb.virtio_nettx_tb.qos_query_req Reset asserted
+     5.00ns INFO     ..tb.virtio_nettx_tb.qos_query_rsp Reset asserted
+     5.00ns INFO     cocotb.virtio_nettx_tb.qos_update  Reset asserted
+     5.00ns INFO     ..b.virtio_nettx_tb.nettx_desc_rsp Reset asserted
+     5.00ns INFO     ..tio_nettx_tb.rd_data_ctx_info_rd Reset asserted
+     5.00ns INFO     cocotb.virtio_nettx_tb.net2tso     Reset asserted
+     5.00ns INFO     cocotb.virtio_nettx_tb.used_info   Reset asserted
+     5.00ns INFO     cocotb.virtio_nettx_tb.dma         Reset asserted
+     5.00ns INFO     cocotb.virtio_nettx_tb.dma         Reset asserted
+     5.00ns INFO     cocotb.reg_0x0_0x10000000000000000 Reset asserted
+  1010.00ns INFO     cocotb.virtio_nettx_tb.sch_req     Reset de-asserted
+  1010.00ns INFO     ..io_nettx_tb.nettx_alloc_slot_req Reset de-asserted
+  1010.00ns INFO     ..io_nettx_tb.nettx_alloc_slot_rsp Reset de-asserted
+  1010.00ns INFO     ..o_nettx_tb.slot_ctrl_ctx_info_rd Reset de-asserted
+  1010.00ns INFO     ..tb.virtio_nettx_tb.qos_query_req Reset de-asserted
+  1010.00ns INFO     ..tb.virtio_nettx_tb.qos_query_rsp Reset de-asserted
+  1010.00ns INFO     cocotb.virtio_nettx_tb.qos_update  Reset de-asserted
+  1010.00ns INFO     ..b.virtio_nettx_tb.nettx_desc_rsp Reset de-asserted
+  1010.00ns INFO     ..tio_nettx_tb.rd_data_ctx_info_rd Reset de-asserted
+  1010.00ns INFO     cocotb.virtio_nettx_tb.net2tso     Reset de-asserted
+  1010.00ns INFO     cocotb.virtio_nettx_tb.used_info   Reset de-asserted
+  1010.00ns INFO     cocotb.virtio_nettx_tb.dma         Reset de-asserted
+  1010.00ns INFO     cocotb.virtio_nettx_tb.dma         Reset de-asserted
+  1010.00ns INFO     cocotb.reg_0x0_0x10000000000000000 Reset de-asserted
+103550.00ns INFO     cocotb.tb                          QID 216 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 59373
+103605.00ns INFO     cocotb.tb                          QID 216 Context Read: Injecting Forced Shutdown for RingID 59373
+104030.00ns INFO     cocotb.tb                          QID 17 Injecting Early Forced Shutdown (SBD=1) for RingID 15532
+104335.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 4057...
+104340.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 4057 Len 375
+104351.00ns INFO     cocotb.tb                          QID 216 Recovered dropped packet (RingID 59373) from Scoreboard. Type: forced_shutdown, Len: 0
+104351.00ns INFO     cocotb.tb                          QID 216 Error Packet Correctly Handled. Type: forced_shutdown
+104366.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 15532) from Scoreboard. Type: forced_shutdown, Len: 0
+104366.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+105950.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 25130...
+105955.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 25130 Len 1156
+106120.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 32298...
+106125.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 32298 Len 593
+106220.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 42128...
+106225.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 42128 Len 435
+106700.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 47005...
+106705.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 47005 Len 667
+107300.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 20979...
+107305.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 20979 Len 1431
+107460.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 62783...
+107465.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 62783 Len 441
+107650.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 40285...
+107655.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 40285 Len 301
+108200.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 33498...
+108205.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 33498 Len 426
+108475.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 26898...
+108480.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 26898 Len 722
+108875.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 63357...
+108880.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 63357 Len 858
+109220.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 51645...
+109225.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 51645 Len 1206
+109465.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 20933...
+109470.00ns INFO     cocotb.tb                          QID 215 Injecting Early Forced Shutdown (SBD=1) for RingID 290
+109470.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 20933 Len 1182
+109620.00ns INFO     cocotb.tb                          QID 37 Injecting Early Forced Shutdown (SBD=1) for RingID 59339
+109690.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 59518...
+109695.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 59518 Len 1122
+109955.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 12013...
+109960.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 12013 Len 476
+110090.00ns INFO     cocotb.tb                          QID 216 Injecting Early Forced Shutdown (SBD=1) for RingID 58295
+110530.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 55706...
+110535.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 55706 Len 313
+110546.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 290) from Scoreboard. Type: forced_shutdown, Len: 0
+110546.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+110561.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 59339) from Scoreboard. Type: forced_shutdown, Len: 0
+110561.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+110576.00ns INFO     cocotb.tb                          QID 216 Recovered dropped packet (RingID 58295) from Scoreboard. Type: forced_shutdown, Len: 0
+110576.00ns INFO     cocotb.tb                          QID 216 Error Packet Correctly Handled. Type: forced_shutdown
+110920.00ns INFO     cocotb.tb                          QID 158 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 49232
+110975.00ns INFO     cocotb.tb                          QID 158 Context Read: Injecting Forced Shutdown for RingID 49232
+111420.00ns INFO     cocotb.tb                          QID 158 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 14344
+111475.00ns INFO     cocotb.tb                          QID 158 Context Read: Injecting Forced Shutdown for RingID 14344
+111795.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 17055...
+111800.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 17055 Len 129
+111811.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 49232) from Scoreboard. Type: forced_shutdown, Len: 0
+111811.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+112030.00ns INFO     cocotb.tb                          QID 17 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 40714
+112085.00ns INFO     cocotb.tb                          QID 17 Context Read: Injecting Forced Shutdown for RingID 40714
+112230.00ns INFO     cocotb.tb                          QID 37 Injecting Early Forced Shutdown (SBD=1) for RingID 23430
+112385.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 309...
+112390.00ns INFO     cocotb.tb                          QID 158 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 42927
+112390.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 309 Len 555
+112401.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 14344) from Scoreboard. Type: forced_shutdown, Len: 0
+112401.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+112445.00ns INFO     cocotb.tb                          QID 158 Context Read: Injecting Forced Shutdown for RingID 42927
+112780.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 13372
+113150.00ns INFO     cocotb.tb                          QID 100 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 41675
+113205.00ns INFO     cocotb.tb                          QID 100 Context Read: Injecting Forced Shutdown for RingID 41675
+113220.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 30152...
+113225.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 30152 Len 1525
+113236.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 40714) from Scoreboard. Type: forced_shutdown, Len: 0
+113236.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+113251.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 23430) from Scoreboard. Type: forced_shutdown, Len: 0
+113251.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+113266.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 42927) from Scoreboard. Type: forced_shutdown, Len: 0
+113266.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+114095.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 59594...
+114100.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 59594 Len 1236
+114111.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 13372) from Scoreboard. Type: forced_shutdown, Len: 0
+114111.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+114126.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 41675) from Scoreboard. Type: forced_shutdown, Len: 0
+114126.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+114870.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 48561...
+114875.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 48561 Len 657
+115005.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 40938...
+115010.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 40938 Len 363
+115100.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 54838...
+115105.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 54838 Len 381
+115440.00ns INFO     cocotb.tb                          QID 17 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 56145
+115495.00ns INFO     cocotb.tb                          QID 17 Context Read: Injecting Forced Shutdown for RingID 56145
+115785.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 53852...
+115790.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 53852 Len 854
+116145.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 27285...
+116150.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 27285 Len 676
+116415.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 25389...
+116420.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 25389 Len 315
+116431.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 56145) from Scoreboard. Type: forced_shutdown, Len: 0
+116431.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+116690.00ns INFO     cocotb.tb                          QID 37 Injecting Early Forced Shutdown (SBD=1) for RingID 39328
+116960.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 44091...
+116965.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 44091 Len 407
+117335.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 46454...
+117340.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 46454 Len 319
+117535.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 15856...
+117540.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 15856 Len 499
+117551.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 39328) from Scoreboard. Type: forced_shutdown, Len: 0
+117551.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+117840.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 48447
+118000.00ns INFO     cocotb.tb                          QID 10 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 9322
+118055.00ns INFO     cocotb.tb                          QID 10 Context Read: Injecting Forced Shutdown for RingID 9322
+118200.00ns INFO     cocotb.tb                          QID 37 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 18973
+118255.00ns INFO     cocotb.tb                          QID 37 Context Read: Injecting Forced Shutdown for RingID 18973
+118445.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 8632...
+118450.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 8632 Len 910
+118960.00ns INFO     cocotb.tb                          QID 135 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 48177
+118975.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 63727...
+118980.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 63727 Len 1441
+118991.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 48447) from Scoreboard. Type: forced_shutdown, Len: 0
+118991.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+119006.00ns INFO     cocotb.tb                          QID 10 Recovered dropped packet (RingID 9322) from Scoreboard. Type: forced_shutdown, Len: 0
+119006.00ns INFO     cocotb.tb                          QID 10 Error Packet Correctly Handled. Type: forced_shutdown
+119015.00ns INFO     cocotb.tb                          QID 135 Context Read: Injecting Forced Shutdown for RingID 48177
+119021.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 18973) from Scoreboard. Type: forced_shutdown, Len: 0
+119021.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+119860.00ns INFO     cocotb.tb                          QID 216 Injecting Early Forced Shutdown (SBD=1) for RingID 29740
+119965.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 57855...
+119970.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 57855 Len 295
+120030.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 61672...
+120035.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 61672 Len 118
+120046.00ns INFO     cocotb.tb                          QID 135 Recovered dropped packet (RingID 48177) from Scoreboard. Type: forced_shutdown, Len: 0
+120046.00ns INFO     cocotb.tb                          QID 135 Error Packet Correctly Handled. Type: forced_shutdown
+120695.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 21559...
+120700.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 21559 Len 251
+120711.00ns INFO     cocotb.tb                          QID 216 Recovered dropped packet (RingID 29740) from Scoreboard. Type: forced_shutdown, Len: 0
+120711.00ns INFO     cocotb.tb                          QID 216 Error Packet Correctly Handled. Type: forced_shutdown
+121450.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 14416...
+121455.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 14416 Len 362
+121855.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 42590...
+121860.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 42590 Len 1007
+122350.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 64407...
+122355.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 64407 Len 1174
+122400.00ns INFO     cocotb.tb                          QID 10 Injecting Early Forced Shutdown (SBD=1) for RingID 54174
+122610.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 4892
+122625.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 59121...
+122630.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 59121 Len 1022
+122930.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 51126...
+122935.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 51126 Len 687
+123250.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 60876...
+123255.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 60876 Len 212
+123355.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 8913...
+123360.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 8913 Len 288
+123371.00ns INFO     cocotb.tb                          QID 10 Recovered dropped packet (RingID 54174) from Scoreboard. Type: forced_shutdown, Len: 0
+123371.00ns INFO     cocotb.tb                          QID 10 Error Packet Correctly Handled. Type: forced_shutdown
+123386.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 4892) from Scoreboard. Type: forced_shutdown, Len: 0
+123386.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+123970.00ns INFO     cocotb.tb                          QID 37 Injecting Early Forced Shutdown (SBD=1) for RingID 8544
+124150.00ns INFO     cocotb.tb                          QID 7 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 29074
+124205.00ns INFO     cocotb.tb                          QID 7 Context Read: Injecting Forced Shutdown for RingID 29074
+124605.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 47560...
+124610.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 47560 Len 885
+124840.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 2503...
+124845.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 2503 Len 714
+125340.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 64960...
+125345.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 64960 Len 1386
+125356.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 8544) from Scoreboard. Type: forced_shutdown, Len: 0
+125356.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+125371.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 29074) from Scoreboard. Type: forced_shutdown, Len: 0
+125371.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+125755.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 42544...
+125760.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 42544 Len 1282
+125780.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 23525
+125935.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 16370...
+125940.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 16370 Len 330
+126080.00ns INFO     cocotb.tb                          QID 37 Injecting Early Forced Shutdown (SBD=1) for RingID 49750
+126565.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 12314...
+126570.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 12314 Len 766
+126760.00ns INFO     cocotb.tb                          QID 100 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 38410
+126815.00ns INFO     cocotb.tb                          QID 100 Context Read: Injecting Forced Shutdown for RingID 38410
+126835.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 20735...
+126840.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 20735 Len 855
+126851.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 23525) from Scoreboard. Type: forced_shutdown, Len: 0
+126851.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+126866.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 49750) from Scoreboard. Type: forced_shutdown, Len: 0
+126866.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+127250.00ns INFO     cocotb.tb                          QID 10 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 26507
+127305.00ns INFO     cocotb.tb                          QID 10 Context Read: Injecting Forced Shutdown for RingID 26507
+127520.00ns INFO     cocotb.tb                          QID 158 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 35000
+127550.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 29912...
+127555.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 29912 Len 686
+127566.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 38410) from Scoreboard. Type: forced_shutdown, Len: 0
+127566.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+127575.00ns INFO     cocotb.tb                          QID 158 Context Read: Injecting Forced Shutdown for RingID 35000
+127730.00ns INFO     cocotb.tb                          QID 215 Injecting Early Forced Shutdown (SBD=1) for RingID 49636
+128220.00ns INFO     cocotb.tb                          QID 216 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 62363
+128270.00ns INFO     cocotb.tb                          QID 215 Injecting Early Forced Shutdown (SBD=1) for RingID 19656
+128275.00ns INFO     cocotb.tb                          QID 216 Context Read: Injecting Forced Shutdown for RingID 62363
+128325.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 17936...
+128330.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 17936 Len 948
+128341.00ns INFO     cocotb.tb                          QID 10 Recovered dropped packet (RingID 26507) from Scoreboard. Type: forced_shutdown, Len: 0
+128341.00ns INFO     cocotb.tb                          QID 10 Error Packet Correctly Handled. Type: forced_shutdown
+128356.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 35000) from Scoreboard. Type: forced_shutdown, Len: 0
+128356.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+128371.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 49636) from Scoreboard. Type: forced_shutdown, Len: 0
+128371.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+128680.00ns INFO     cocotb.tb                          QID 158 Injecting Early Forced Shutdown (SBD=1) for RingID 62374
+129535.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 16982...
+129540.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 16982 Len 1483
+129551.00ns INFO     cocotb.tb                          QID 216 Recovered dropped packet (RingID 62363) from Scoreboard. Type: forced_shutdown, Len: 0
+129551.00ns INFO     cocotb.tb                          QID 216 Error Packet Correctly Handled. Type: forced_shutdown
+129566.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 19656) from Scoreboard. Type: forced_shutdown, Len: 0
+129566.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+129965.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 49675...
+129970.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 49675 Len 1291
+129981.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 62374) from Scoreboard. Type: forced_shutdown, Len: 0
+129981.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+130110.00ns INFO     cocotb.tb                          QID 98 Injecting Early Forced Shutdown (SBD=1) for RingID 30189
+130260.00ns INFO     cocotb.tb                          QID 216 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 4970
+130315.00ns INFO     cocotb.tb                          QID 216 Context Read: Injecting Forced Shutdown for RingID 4970
+130470.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 12996...
+130475.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 12996 Len 1396
+130610.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 52201...
+130615.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 52201 Len 511
+131045.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 7819...
+131050.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 7819 Len 578
+131061.00ns INFO     cocotb.tb                          QID 98 Recovered dropped packet (RingID 30189) from Scoreboard. Type: forced_shutdown, Len: 0
+131061.00ns INFO     cocotb.tb                          QID 98 Error Packet Correctly Handled. Type: forced_shutdown
+131076.00ns INFO     cocotb.tb                          QID 216 Recovered dropped packet (RingID 4970) from Scoreboard. Type: forced_shutdown, Len: 0
+131076.00ns INFO     cocotb.tb                          QID 216 Error Packet Correctly Handled. Type: forced_shutdown
+131745.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 39569...
+131750.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 39569 Len 817
+132180.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 27437...
+132185.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 27437 Len 804
+132570.00ns INFO     cocotb.tb                          QID 135 Injecting Early Forced Shutdown (SBD=1) for RingID 35978
+132630.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 64711...
+132635.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 64711 Len 1417
+132805.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 60064...
+132810.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 60064 Len 1023
+133350.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 27911...
+133355.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 27911 Len 1353
+133425.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 60532...
+133430.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 60532 Len 373
+133441.00ns INFO     cocotb.tb                          QID 135 Recovered dropped packet (RingID 35978) from Scoreboard. Type: forced_shutdown, Len: 0
+133441.00ns INFO     cocotb.tb                          QID 135 Error Packet Correctly Handled. Type: forced_shutdown
+134325.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 33651...
+134330.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 33651 Len 598
+134450.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 39702...
+134455.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 39702 Len 117
+134765.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 38827...
+134770.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 38827 Len 497
+135150.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 2371...
+135155.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 2371 Len 942
+135180.00ns INFO     cocotb.tb                          QID 215 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 52431
+135235.00ns INFO     cocotb.tb                          QID 215 Context Read: Injecting Forced Shutdown for RingID 52431
+135465.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 16216...
+135470.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 16216 Len 1236
+135735.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 31417...
+135740.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 31417 Len 695
+136295.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 36770...
+136300.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 36770 Len 1131
+136311.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 52431) from Scoreboard. Type: forced_shutdown, Len: 0
+136311.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+137005.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 46615...
+137010.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 46615 Len 1004
+137345.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 8198...
+137350.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 8198 Len 510
+137400.00ns INFO     cocotb.tb                          QID 17 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 61000
+137455.00ns INFO     cocotb.tb                          QID 17 Context Read: Injecting Forced Shutdown for RingID 61000
+137650.00ns INFO     cocotb.tb                          QID 17 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 34342
+137705.00ns INFO     cocotb.tb                          QID 17 Context Read: Injecting Forced Shutdown for RingID 34342
+137760.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 54744...
+137765.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 54744 Len 960
+137800.00ns INFO     cocotb.tb                          QID 216 Injecting Early Forced Shutdown (SBD=1) for RingID 10109
+138225.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 27434...
+138230.00ns INFO     cocotb.tb                          QID 100 Injecting Early Forced Shutdown (SBD=1) for RingID 63042
+138230.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 27434 Len 996
+138315.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 31761...
+138320.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 31761 Len 180
+138331.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 61000) from Scoreboard. Type: forced_shutdown, Len: 0
+138331.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+138346.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 34342) from Scoreboard. Type: forced_shutdown, Len: 0
+138346.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+138361.00ns INFO     cocotb.tb                          QID 216 Recovered dropped packet (RingID 10109) from Scoreboard. Type: forced_shutdown, Len: 0
+138361.00ns INFO     cocotb.tb                          QID 216 Error Packet Correctly Handled. Type: forced_shutdown
+139210.00ns INFO     cocotb.tb                          QID 216 Injecting Early Forced Shutdown (SBD=1) for RingID 114
+139420.00ns INFO     cocotb.tb                          QID 98 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 10952
+139430.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 63650...
+139435.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 63650 Len 712
+139446.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 63042) from Scoreboard. Type: forced_shutdown, Len: 0
+139446.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+139475.00ns INFO     cocotb.tb                          QID 98 Context Read: Injecting Forced Shutdown for RingID 10952
+139645.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 19284...
+139650.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 19284 Len 338
+140020.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 46947...
+140025.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 46947 Len 936
+140290.00ns INFO     cocotb.tb                          QID 215 Injecting Early Forced Shutdown (SBD=1) for RingID 37799
+140295.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 37620...
+140300.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 37620 Len 1412
+140460.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 17840...
+140465.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 17840 Len 951
+140476.00ns INFO     cocotb.tb                          QID 216 Recovered dropped packet (RingID 114) from Scoreboard. Type: forced_shutdown, Len: 0
+140476.00ns INFO     cocotb.tb                          QID 216 Error Packet Correctly Handled. Type: forced_shutdown
+140491.00ns INFO     cocotb.tb                          QID 98 Recovered dropped packet (RingID 10952) from Scoreboard. Type: forced_shutdown, Len: 0
+140491.00ns INFO     cocotb.tb                          QID 98 Error Packet Correctly Handled. Type: forced_shutdown
+140875.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 59855...
+140880.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 59855 Len 466
+141380.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 33698...
+141385.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 33698 Len 233
+141396.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 37799) from Scoreboard. Type: forced_shutdown, Len: 0
+141396.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+142020.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 48228...
+142025.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 48228 Len 809
+142090.00ns INFO     cocotb.tb                          QID 100 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 23908
+142145.00ns INFO     cocotb.tb                          QID 100 Context Read: Injecting Forced Shutdown for RingID 23908
+142195.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 22085...
+142200.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 22085 Len 380
+142520.00ns INFO     cocotb.tb                          QID 135 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 27722
+142575.00ns INFO     cocotb.tb                          QID 135 Context Read: Injecting Forced Shutdown for RingID 27722
+142640.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 4751...
+142645.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 4751 Len 948
+143105.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 11303...
+143110.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 11303 Len 1241
+143210.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 2192...
+143215.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 2192 Len 368
+143226.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 23908) from Scoreboard. Type: forced_shutdown, Len: 0
+143226.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+143550.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 16546...
+143555.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 16546 Len 256
+143566.00ns INFO     cocotb.tb                          QID 135 Recovered dropped packet (RingID 27722) from Scoreboard. Type: forced_shutdown, Len: 0
+143566.00ns INFO     cocotb.tb                          QID 135 Error Packet Correctly Handled. Type: forced_shutdown
+144190.00ns INFO     cocotb.tb                          QID 17 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 23057
+144245.00ns INFO     cocotb.tb                          QID 17 Context Read: Injecting Forced Shutdown for RingID 23057
+144390.00ns INFO     cocotb.tb                          QID 17 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 11796
+144410.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 64372...
+144415.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 64372 Len 1046
+144445.00ns INFO     cocotb.tb                          QID 17 Context Read: Injecting Forced Shutdown for RingID 11796
+144480.00ns INFO     cocotb.tb                          QID 98 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 12212
+144555.00ns INFO     cocotb.tb                          QID 98 Context Read: Injecting Forced Shutdown for RingID 12212
+144730.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 9196...
+144735.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 9196 Len 449
+145045.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 28547...
+145050.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 28547 Len 648
+145061.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 23057) from Scoreboard. Type: forced_shutdown, Len: 0
+145061.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+145076.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 11796) from Scoreboard. Type: forced_shutdown, Len: 0
+145076.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+145091.00ns INFO     cocotb.tb                          QID 98 Recovered dropped packet (RingID 12212) from Scoreboard. Type: forced_shutdown, Len: 0
+145091.00ns INFO     cocotb.tb                          QID 98 Error Packet Correctly Handled. Type: forced_shutdown
+146120.00ns INFO     cocotb.tb                          QID 100 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 3091
+146175.00ns INFO     cocotb.tb                          QID 100 Context Read: Injecting Forced Shutdown for RingID 3091
+146195.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 41744...
+146200.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 41744 Len 1155
+146470.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 19405...
+146475.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 19405 Len 557
+147075.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 46920...
+147080.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 46920 Len 1237
+147125.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 59044...
+147130.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 59044 Len 115
+147295.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 37607...
+147300.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 37607 Len 893
+147311.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 3091) from Scoreboard. Type: forced_shutdown, Len: 0
+147311.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+147710.00ns INFO     cocotb.tb                          QID 158 Injecting Early Forced Shutdown (SBD=1) for RingID 14219
+147790.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 4668...
+147795.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 4668 Len 864
+148120.00ns INFO     cocotb.tb                          QID 158 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 52257
+148170.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 6123...
+148175.00ns INFO     cocotb.tb                          QID 158 Context Read: Injecting Forced Shutdown for RingID 52257
+148175.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 6123 Len 984
+148345.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 54657...
+148350.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 54657 Len 351
+148795.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 1649...
+148800.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 1649 Len 1499
+148965.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 43152...
+148970.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 43152 Len 874
+148981.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 14219) from Scoreboard. Type: forced_shutdown, Len: 0
+148981.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+149080.00ns INFO     cocotb.tb                          QID 7 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 16989
+149135.00ns INFO     cocotb.tb                          QID 7 Context Read: Injecting Forced Shutdown for RingID 16989
+149230.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 24141...
+149235.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 24141 Len 977
+149246.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 52257) from Scoreboard. Type: forced_shutdown, Len: 0
+149246.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+149965.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 16387...
+149970.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 16387 Len 970
+150235.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 39617...
+150240.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 39617 Len 1117
+150251.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 16989) from Scoreboard. Type: forced_shutdown, Len: 0
+150251.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+150540.00ns INFO     cocotb.tb                          QID 17 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 59416
+150540.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 58231...
+150545.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 58231 Len 1101
+150570.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 26309...
+150575.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 26309 Len 81
+150595.00ns INFO     cocotb.tb                          QID 17 Context Read: Injecting Forced Shutdown for RingID 59416
+151055.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 7184...
+151060.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 7184 Len 446
+151450.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 4785...
+151455.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 4785 Len 400
+151466.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 59416) from Scoreboard. Type: forced_shutdown, Len: 0
+151466.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+152320.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 24936
+152520.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 55204...
+152525.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 55204 Len 1294
+152815.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 59690...
+152820.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 59690 Len 632
+153115.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 48711...
+153120.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 48711 Len 361
+153515.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 58761...
+153520.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 58761 Len 820
+153531.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 24936) from Scoreboard. Type: forced_shutdown, Len: 0
+153531.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+154045.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 53959...
+154050.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 53959 Len 661
+154295.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 57273...
+154300.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 57273 Len 230
+154630.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 30224
+154980.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 63157...
+154985.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 63157 Len 837
+155030.00ns INFO     cocotb.tb                          QID 37 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 32387
+155085.00ns INFO     cocotb.tb                          QID 37 Context Read: Injecting Forced Shutdown for RingID 32387
+155435.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 56278...
+155440.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 56278 Len 957
+155535.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 40239...
+155540.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 40239 Len 347
+155551.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 30224) from Scoreboard. Type: forced_shutdown, Len: 0
+155551.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+155566.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 32387) from Scoreboard. Type: forced_shutdown, Len: 0
+155566.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+155920.00ns INFO     cocotb.tb                          QID 135 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 47249
+155975.00ns INFO     cocotb.tb                          QID 135 Context Read: Injecting Forced Shutdown for RingID 47249
+156200.00ns INFO     cocotb.tb                          QID 37 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 51118
+156255.00ns INFO     cocotb.tb                          QID 37 Context Read: Injecting Forced Shutdown for RingID 51118
+156510.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 18017...
+156515.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 18017 Len 379
+156935.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 60509...
+156940.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 60509 Len 1121
+156951.00ns INFO     cocotb.tb                          QID 135 Recovered dropped packet (RingID 47249) from Scoreboard. Type: forced_shutdown, Len: 0
+156951.00ns INFO     cocotb.tb                          QID 135 Error Packet Correctly Handled. Type: forced_shutdown
+156966.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 51118) from Scoreboard. Type: forced_shutdown, Len: 0
+156966.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+157710.00ns INFO     cocotb.tb                          QID 216 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 4744
+157765.00ns INFO     cocotb.tb                          QID 216 Context Read: Injecting Forced Shutdown for RingID 4744
+158030.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 37168...
+158035.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 37168 Len 1356
+158245.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 25657...
+158250.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 25657 Len 1109
+158565.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 60606...
+158570.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 60606 Len 895
+158581.00ns INFO     cocotb.tb                          QID 216 Recovered dropped packet (RingID 4744) from Scoreboard. Type: forced_shutdown, Len: 0
+158581.00ns INFO     cocotb.tb                          QID 216 Error Packet Correctly Handled. Type: forced_shutdown
+159550.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 27057...
+159555.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 27057 Len 99
+159890.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 9131...
+159895.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 9131 Len 158
+159900.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 19052
+160115.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 35233...
+160120.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 35233 Len 545
+160730.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 10989...
+160735.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 10989 Len 1293
+160800.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 42730...
+160805.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 42730 Len 155
+160816.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 19052) from Scoreboard. Type: forced_shutdown, Len: 0
+160816.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+161520.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 25902...
+161525.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 25902 Len 465
+161570.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 50878...
+161575.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 50878 Len 123
+162455.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 2486...
+162460.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 2486 Len 1375
+162940.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 6180...
+162945.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 6180 Len 1502
+163105.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 18981...
+163110.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 18981 Len 881
+163325.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 25015...
+163330.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 25015 Len 1154
+163875.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 36651...
+163880.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 36651 Len 1294
+164055.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 1037...
+164060.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 1037 Len 854
+164500.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 16622...
+164505.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 16622 Len 812
+164640.00ns INFO     cocotb.tb                          QID 158 Injecting Early Forced Shutdown (SBD=1) for RingID 24088
+164960.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 54764...
+164965.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 54764 Len 458
+165680.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 53367...
+165685.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 53367 Len 1380
+165696.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 24088) from Scoreboard. Type: forced_shutdown, Len: 0
+165696.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+165710.00ns INFO     cocotb.tb                          QID 37 Injecting Early Forced Shutdown (SBD=1) for RingID 44109
+166360.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 55243...
+166365.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 55243 Len 447
+166765.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 28219...
+166770.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 28219 Len 922
+166781.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 44109) from Scoreboard. Type: forced_shutdown, Len: 0
+166781.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+167335.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 41492...
+167340.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 41492 Len 1159
+167665.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 44442...
+167670.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 44442 Len 1138
+167830.00ns INFO     cocotb.tb                          QID 100 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 32263
+167885.00ns INFO     cocotb.tb                          QID 100 Context Read: Injecting Forced Shutdown for RingID 32263
+168225.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 13816...
+168230.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 13816 Len 1353
+168515.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 21748...
+168520.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 21748 Len 686
+168760.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 16439...
+168765.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 16439 Len 929
+168776.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 32263) from Scoreboard. Type: forced_shutdown, Len: 0
+168776.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+168990.00ns INFO     cocotb.tb                          QID 215 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 16864
+169045.00ns INFO     cocotb.tb                          QID 215 Context Read: Injecting Forced Shutdown for RingID 16864
+169380.00ns INFO     cocotb.tb                          QID 135 Injecting Early Forced Shutdown (SBD=1) for RingID 8549
+169470.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 2573
+169700.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 10954...
+169705.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 10954 Len 1490
+169835.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 53886...
+169840.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 53886 Len 161
+170000.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 62082
+170255.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 62342...
+170260.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 62342 Len 1364
+170271.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 16864) from Scoreboard. Type: forced_shutdown, Len: 0
+170271.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+170286.00ns INFO     cocotb.tb                          QID 135 Recovered dropped packet (RingID 8549) from Scoreboard. Type: forced_shutdown, Len: 0
+170286.00ns INFO     cocotb.tb                          QID 135 Error Packet Correctly Handled. Type: forced_shutdown
+170301.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 2573) from Scoreboard. Type: forced_shutdown, Len: 0
+170301.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+170310.00ns INFO     cocotb.tb                          QID 158 Injecting Early Forced Shutdown (SBD=1) for RingID 39205
+170316.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 62082) from Scoreboard. Type: forced_shutdown, Len: 0
+170316.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+170411.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 39205) from Scoreboard. Type: forced_shutdown, Len: 0
+170411.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+171490.00ns INFO     cocotb.tb                          QID 100 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 27919
+171545.00ns INFO     cocotb.tb                          QID 100 Context Read: Injecting Forced Shutdown for RingID 27919
+172070.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 38741...
+172075.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 38741 Len 1299
+172080.00ns INFO     cocotb.tb                          QID 100 Injecting Early Forced Shutdown (SBD=1) for RingID 37401
+172340.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 26434...
+172345.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 26434 Len 1046
+172560.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 33848...
+172565.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 33848 Len 1213
+172576.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 27919) from Scoreboard. Type: forced_shutdown, Len: 0
+172576.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+172930.00ns INFO     cocotb.tb                          QID 37 Injecting Early Forced Shutdown (SBD=1) for RingID 17443
+173235.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 1592...
+173240.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 1592 Len 336
+173251.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 37401) from Scoreboard. Type: forced_shutdown, Len: 0
+173251.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+173770.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 3851...
+173775.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 3851 Len 931
+173786.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 17443) from Scoreboard. Type: forced_shutdown, Len: 0
+173786.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+174430.00ns INFO     cocotb.tb                          QID 100 Injecting Early Forced Shutdown (SBD=1) for RingID 53774
+174595.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 7626...
+174600.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 7626 Len 1095
+174780.00ns INFO     cocotb.tb                          QID 17 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 47933
+174835.00ns INFO     cocotb.tb                          QID 17 Context Read: Injecting Forced Shutdown for RingID 47933
+174855.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 36493...
+174860.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 36493 Len 694
+175100.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 11532...
+175105.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 11532 Len 946
+175225.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 43825...
+175230.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 43825 Len 592
+175330.00ns INFO     cocotb.tb                          QID 215 Injecting Early Forced Shutdown (SBD=1) for RingID 29805
+175440.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 25476...
+175445.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 25476 Len 644
+175456.00ns INFO     cocotb.tb                          QID 100 Recovered dropped packet (RingID 53774) from Scoreboard. Type: forced_shutdown, Len: 0
+175456.00ns INFO     cocotb.tb                          QID 100 Error Packet Correctly Handled. Type: forced_shutdown
+175471.00ns INFO     cocotb.tb                          QID 17 Recovered dropped packet (RingID 47933) from Scoreboard. Type: forced_shutdown, Len: 0
+175471.00ns INFO     cocotb.tb                          QID 17 Error Packet Correctly Handled. Type: forced_shutdown
+175670.00ns INFO     cocotb.tb                          QID 7 Injecting Early Forced Shutdown (SBD=1) for RingID 49689
+176515.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 36639...
+176520.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 36639 Len 726
+176531.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 29805) from Scoreboard. Type: forced_shutdown, Len: 0
+176531.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+176546.00ns INFO     cocotb.tb                          QID 7 Recovered dropped packet (RingID 49689) from Scoreboard. Type: forced_shutdown, Len: 0
+176546.00ns INFO     cocotb.tb                          QID 7 Error Packet Correctly Handled. Type: forced_shutdown
+177030.00ns INFO     cocotb.tb                          QID 215 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 4506
+177270.00ns INFO     cocotb.tb                          QID 215 Context Read: Injecting Forced Shutdown for RingID 4506
+177310.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 52644...
+177315.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 52644 Len 724
+177585.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 16798...
+177590.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 16798 Len 615
+178115.00ns INFO     cocotb.tb                          QID 135 Waiting for Net2Tso data for RingID 59045...
+178120.00ns INFO     cocotb.tb                          QID 135 Net2Tso Verified RingID 59045 Len 552
+178385.00ns INFO     cocotb.tb                          QID 158 Waiting for Net2Tso data for RingID 40643...
+178390.00ns INFO     cocotb.tb                          QID 158 Net2Tso Verified RingID 40643 Len 852
+178401.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 4506) from Scoreboard. Type: forced_shutdown, Len: 0
+178401.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+178485.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 16915...
+178490.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 16915 Len 229
+178880.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 42939...
+178885.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 42939 Len 1342
+179090.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 16686...
+179095.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 16686 Len 753
+179335.00ns INFO     cocotb.tb                          QID 98 Waiting for Net2Tso data for RingID 8566...
+179340.00ns INFO     cocotb.tb                          QID 98 Net2Tso Verified RingID 8566 Len 1083
+179725.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 13582...
+179730.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 13582 Len 1449
+179845.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 8553...
+179850.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 8553 Len 366
+180210.00ns INFO     cocotb.tb                          QID 7 Waiting for Net2Tso data for RingID 18966...
+180215.00ns INFO     cocotb.tb                          QID 7 Net2Tso Verified RingID 18966 Len 1289
+180535.00ns INFO     cocotb.tb                          QID 17 Waiting for Net2Tso data for RingID 50773...
+180540.00ns INFO     cocotb.tb                          QID 17 Net2Tso Verified RingID 50773 Len 1003
+180640.00ns INFO     cocotb.tb                          QID 158 Injecting Early Forced Shutdown (SBD=1) for RingID 61664
+180755.00ns INFO     cocotb.tb                          QID 216 Waiting for Net2Tso data for RingID 27909...
+180760.00ns INFO     cocotb.tb                          QID 216 Net2Tso Verified RingID 27909 Len 669
+181065.00ns INFO     cocotb.tb                          QID 215 Waiting for Net2Tso data for RingID 19995...
+181070.00ns INFO     cocotb.tb                          QID 215 Net2Tso Verified RingID 19995 Len 135
+181380.00ns INFO     cocotb.tb                          QID 37 Injecting Early Forced Shutdown (SBD=1) for RingID 28966
+181655.00ns INFO     cocotb.tb                          QID 100 Waiting for Net2Tso data for RingID 704...
+181660.00ns INFO     cocotb.tb                          QID 215 Injecting Early Forced Shutdown (SBD=1) for RingID 30157
+181660.00ns INFO     cocotb.tb                          QID 100 Net2Tso Verified RingID 704 Len 1222
+181910.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 37360...
+181915.00ns INFO     cocotb.tb                          QID 37 Net2Tso Verified RingID 37360 Len 1127
+181926.00ns INFO     cocotb.tb                          QID 158 Recovered dropped packet (RingID 61664) from Scoreboard. Type: forced_shutdown, Len: 0
+181926.00ns INFO     cocotb.tb                          QID 158 Error Packet Correctly Handled. Type: forced_shutdown
+182100.00ns INFO     cocotb.tb                          QID 10 Injecting Early Forced Shutdown (SBD=1) for RingID 26489
+182310.00ns INFO     cocotb.tb                          QID 10 Waiting for Net2Tso data for RingID 60901...
+182315.00ns INFO     cocotb.tb                          QID 10 Net2Tso Verified RingID 60901 Len 728
+182326.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 28966) from Scoreboard. Type: forced_shutdown, Len: 0
+182326.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+182341.00ns INFO     cocotb.tb                          QID 215 Recovered dropped packet (RingID 30157) from Scoreboard. Type: forced_shutdown, Len: 0
+182341.00ns INFO     cocotb.tb                          QID 215 Error Packet Correctly Handled. Type: forced_shutdown
+182356.00ns INFO     cocotb.tb                          QID 10 Recovered dropped packet (RingID 26489) from Scoreboard. Type: forced_shutdown, Len: 0
+182356.00ns INFO     cocotb.tb                          QID 10 Error Packet Correctly Handled. Type: forced_shutdown
+182580.00ns INFO     cocotb.tb                          QID 37 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 9449
+182635.00ns INFO     cocotb.tb                          QID 37 Context Read: Injecting Forced Shutdown for RingID 9449
+182666.00ns INFO     cocotb.tb                          QID 37 Recovered dropped packet (RingID 9449) from Scoreboard. Type: forced_shutdown, Len: 0
+182666.00ns INFO     cocotb.tb                          QID 37 Error Packet Correctly Handled. Type: forced_shutdown
+182900.00ns INFO     cocotb.tb                          QID 37 Injecting Late Forced Shutdown (SBD=0 -> CTX=1) for RingID 35979
+182905.00ns INFO     cocotb.tb                          QID 37 Context Read: Injecting Forced Shutdown for RingID 35979
+183950.00ns INFO     cocotb.tb                          QID 37 Waiting for Net2Tso data for RingID 32418...
+183955.00ns ERROR    cocotb.tb                          QID 37 RingID 32418 Unexpected TLP Error!
+183955.00ns ERROR    cocotb.tb                          Packet Info: Type=no_err, EarlyDrop=False
+183955.00ns ERROR    cocotb.tb                          Data Received Len: 195
+183955.00ns ERROR    cocotb.tb                          Data Expected Len: 323
+183955.00ns ERROR    cocotb.tb                          infonamespace(qid=37, eth_payload=b'%t%~x\x8cy\x02\xf61\xa1\xf7=\xd92\xd6\xd1\xdaT\xd9\xa7\x11\\\xa6{\xc5\x04\xe6 Y\xe4\xece\xd8X*_"\xb2K\xf9\x8fu\xb4\nh\x0c|\xcc\xbb\xbea\xdb1\xc6c\xba\xb0K\xf9\x88\x92$\x0bX\xd3\xbe-\x90:9\x99\xcc~\x07\xb4+\xcdl\xfd\xe8hH\xc8X$%>!{\xbd\xa8\xaf\xdcO\xaf\x0f;\x19\xbd\x9f\x96\xf1\x85I\xea\xa5\x8a\xdb\xdc\x98 \x1ds\xcc{\xdc4(~\xa1\xb4\xe6\x93\x12\x89c\x0c\xcf\xa6\xb9\xb3X\xc1wc\xb7$\xd2\x94\xf0=rqR\x99\xa7\x9d\xab?\x13\xdfJ\xb0\x0c\x8f\x1f\x1a\xbam\xb7\xeb\xa2@\xe8\xf2\x0c\xf0\x10\x05\xee\x90 \xef\t9Iz)6\xee\x94\x9b\x1d\x9f\x0e&A1\xd5,\x18\xa9#\xb9\x8fP\xd6\xd6\x0f+\xa5\xef\xa8\xf2\xd7S%\x96\xab\x9c\x92u\xc4@e\x1c\x9f\x90\xc6.Y\x03\xe6\x83\x04\x8b\x17\xf1f\x85t\xf9\\>\xad$\xedF\x12e;\xe0X}\xc1\xf4C\xb2pk\xb4~\x00\x8e^@}yB\xc6\xe6\x08ZQD\xe9\xe3\xeb\xf2\xda\x8b\x0eg\xee\xe3T\x93\x08\xcd\xae\x08\xe82\xbe\xc9\x14\xc2\xb5\x1e\xfd\xf7\xc3\r\xcb\x98$\x7f\x16\xa4m\x85O\x85\xcc\x0c\\n\xbd\x8f\x14', mem_regions=[<address_space.MemoryRegion object at 0x15553b3850a0>, <address_space.MemoryRegion object at 0x15553b265e80>, <address_space.MemoryRegion object at 0x15553b265820>, <address_space.MemoryRegion object at 0x15553b2656d0>, <address_space.MemoryRegion object at 0x15553fed5940>, <address_space.MemoryRegion object at 0x15553fed5c40>, <address_space.MemoryRegion object at 0x15553b305d00>, <address_space.MemoryRegion object at 0x15553b34a940>], desc_chain=[namespace(addr=0, len=102, next=0, flags_next=1, flags_write=0, flags_indirect=0), namespace(addr=128, len=97, next=0, flags_next=1, flags_write=0, flags_indirect=0), namespace(addr=256, len=39, next=0, flags_next=1, flags_write=0, flags_indirect=0), namespace(addr=384, len=79, next=0, flags_next=1, flags_write=0, flags_indirect=0), namespace(addr=320, len=2, next=0, flags_next=1, flags_write=0, flags_indirect=0), namespace(addr=512, len=1, next=0, flags_next=1, flags_write=0, flags_indirect=0), namespace(addr=576, len=2, next=0, flags_next=1, flags_write=0, flags_indirect=0), namespace(addr=640, len=1, next=0, flags_next=0, flags_write=0, flags_indirect=0)], total_len=323, desc_cnt=8, err_type='no_err', expected_ring_id=32418, expected_avail_idx=38, early_drop=False)
+183955.00ns ERROR    ..otb.Task 51.TB.__net2tso_process Exception raised by this forked coroutine
+183955.00ns INFO     cocotb.regression                  run_test_001 [31mfailed[49m[39m
+                                                        Traceback (most recent call last):
+                                                          File "/home/shaolongfei/dpu10prj/sim/virtio2/test_virtio_nettx/test_virtio_nettx_tb.py", line 506, in __net2tso_process
+                                                            raise Exception("Unexpected TLP Error")
+                                                        Exception: Unexpected TLP Error
+183955.00ns INFO     cocotb.regression                  *******************************************************************************************
+                                                        ** TEST                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************
+                                                        ** test_virtio_nettx_tb.run_test_001  [31m FAIL [49m[39m     183955.00          17.21      10690.95  **
+                                                        *******************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                  183955.00          17.91      10272.75  **
+                                                        *******************************************************************************************
+                                                        

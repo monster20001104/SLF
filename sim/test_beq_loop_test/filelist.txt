@@ -1,0 +1,5 @@
+-F ../../src/tlp_adaptor/rtl.f
+-F ../../common/rtl.f
+-F ../../src/beq_loop_test/rtl.f
+beq_loop_test_tb.sv
+

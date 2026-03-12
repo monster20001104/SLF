@@ -1,0 +1,5 @@
++tree beq_loop_test_tb.u0_beq_loop_test_top 0
+-module yucca_sync_fifo
+-module scfifo
+-module ALTERA_DEVICE_FAMILIES
+-module beq_loop_test_dfx

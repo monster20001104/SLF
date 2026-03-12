@@ -1,0 +1,3 @@
+-F ../../../common/rtl.f
+adder_tree_tb.sv
+

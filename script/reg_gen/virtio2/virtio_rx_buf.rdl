@@ -1,0 +1,69 @@
+`include "../common/common64.rdlh"
+addrmap virtio_rx_buf_dfx{
+
+    reg virtio_rx_buf_dfx_err{
+        woclr_field virtio_rx_buf_dfx_err[63:0] = 0;
+    };
+    virtio_rx_buf_dfx_err virtio_rx_buf_dfx_err @0x100;
+
+    reg virtio_rx_buf_dfx_link_err{
+        woclr_field virtio_rx_buf_dfx_link_err[63:0] = 0;
+    };
+    virtio_rx_buf_dfx_link_err virtio_rx_buf_dfx_link_err @0x108;
+
+    reg virtio_rx_buf_dfx_link_stat{
+        hwsts_field virtio_rx_buf_dfx_link_stat[63:0] = 0;
+    };
+    virtio_rx_buf_dfx_link_stat virtio_rx_buf_dfx_link_stat @0x200;
+
+    reg virtio_rx_buf_dfx_drop_stat{
+        hwsts_field virtio_rx_buf_dfx_drop_stat[63:0] = 0;
+    };
+    virtio_rx_buf_dfx_drop_stat virtio_rx_buf_dfx_drop_stat @0x208;
+
+    reg rx_buf_chksum_enable{
+        swcfg_field rx_buf_chksum_enable[0:0] = 1;
+    };
+    rx_buf_chksum_enable rx_buf_chksum_enable @0x000;
+
+    reg rx_buf_sch_weight{
+        swcfg_field rx_buf_sch_weight[7:0] = 33;
+    };
+    rx_buf_sch_weight rx_buf_sch_weight @0x008;
+    
+    reg rx_buf_time_drop_mode{
+        swcfg_field rx_buf_time_drop_mode[7:0] = 0;
+    };
+    rx_buf_time_drop_mode rx_buf_time_drop_mode @0x010;
+    
+    reg rx_buf_random_drop_mode{
+        swcfg_field rx_buf_random_drop_mode[7:0] = 0;
+    };
+    rx_buf_random_drop_mode rx_buf_random_drop_mode @0x018;
+
+    reg csum_drop_pkt_total{
+        hwsts_field csum_drop_pkt_total[63:0] = 0;
+    };
+    csum_drop_pkt_total csum_drop_pkt_total @0x020;
+    
+    reg qos_drop_pkt_total{
+        hwsts_field qos_drop_pkt_total[63:0] = 0;
+    };
+    qos_drop_pkt_total qos_drop_pkt_total @0x028;
+    
+    reg buf_full_drop_pkt_total{
+        hwsts_field buf_full_drop_pkt_total[63:0] = 0;
+    };
+    buf_full_drop_pkt_total buf_full_drop_pkt_total @0x030;
+    
+    reg not_ready_drop_pkt_total{
+        hwsts_field not_ready_drop_pkt_total[63:0] = 0;
+    };
+    not_ready_drop_pkt_total not_ready_drop_pkt_total @0x038;
+
+    reg netrx_if_pkt_cnt{
+        hwsts_field netrx_if_pkt_cnt[63:0] = 0;
+    };
+    netrx_if_pkt_cnt netrx_if_pkt_cnt @0x040;
+
+};

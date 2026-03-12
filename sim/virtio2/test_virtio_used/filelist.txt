@@ -1,0 +1,7 @@
+-F ../../../common/rtl.f
+-F ../../../src/tlp_adaptor/rtl.f
+-F ../../../src/sgdma/rtl.f
++incdir+../../../src/virtio2/.
+-F ../../../src/virtio2/virtio_irq_merge_core/rtl.f
+-F ../../../src/virtio2/virtio_used/rtl.f
+virtio_used_tb.sv

@@ -1,0 +1,44 @@
+`include "../common/common64.rdlh"
+addrmap virtio_avail_ring_reg_dfx{
+    reg dfx_err{
+        woclr_field dfx_err[63:0] = 0;
+    };
+    dfx_err dfx_err0 @0x0;
+    dfx_err dfx_err1 @0x8;
+
+
+    reg dfx_status{
+        hwsts_field dfx_status[63:0] = 0;
+    };
+    dfx_status dfx_status0 @0x100;
+    dfx_status dfx_status1 @0x108;
+
+    reg dfx_ring_empty_cnt0{
+        hwsts_field dfx_ring_empty_cnt0[63:0] = 0;
+    };
+    dfx_ring_empty_cnt0 dfx_ring_empty_cnt0 @0x110;
+
+    reg dfx_ring_empty_cnt1{
+        hwsts_field dfx_ring_empty_cnt1[63:0] = 0;
+    };
+    dfx_ring_empty_cnt1 dfx_ring_empty_cnt1 @0x118;
+
+    reg dfx_ring_empty_cnt2{
+        hwsts_field dfx_ring_empty_cnt2[63:0] = 0;
+    };
+    dfx_ring_empty_cnt2 dfx_ring_empty_cnt2 @0x120;
+
+    reg dfx_cnt{
+        hwsts_field dfx_cnt[63:0] = 0;
+    };
+    dfx_cnt rd_issued_cnt    @0x200;
+    dfx_cnt rd_rsp_cnt       @0x208;
+
+
+    reg dfx_threshold{
+        swmod_field dfx_threshold[31:0] = 0;
+    };
+    dfx_threshold dfx_threshold0 @0x400;
+
+  
+};

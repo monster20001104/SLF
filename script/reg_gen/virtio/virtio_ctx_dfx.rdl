@@ -1,0 +1,27 @@
+`include "../common/common64.rdlh"
+addrmap virtio_ctx_dfx{
+    reg dfx_err_0{
+        woclr_field dfx_err_0[63:0] = 0;
+    };
+    dfx_err_0 dfx_err_0 @0x0;
+
+    reg dfx_err_1{
+        woclr_field dfx_err_1[63:0] = 0;
+    };
+    dfx_err_1 dfx_err_1 @0x8;
+
+    reg dfx_err_2{
+        woclr_field dfx_err_2[63:0] = 0;
+    };
+    dfx_err_2 dfx_err_2 @0x10;
+
+    reg dfx_err_3{
+        woclr_field dfx_err_3[63:0] = 0;
+    };
+    dfx_err_3 dfx_err_3 @0x18;
+
+    reg dfx_status{
+        hwsts_field dfx_status[42:0] = 0;
+    };
+    dfx_status dfx_status @0x40;
+};

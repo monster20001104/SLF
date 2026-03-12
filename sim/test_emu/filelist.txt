@@ -1,0 +1,4 @@
+-F ../../src/tlp_adaptor/rtl.f
+-F ../../common/rtl.f
+-F ../../src/emu/rtl.f
+emu_tb.sv

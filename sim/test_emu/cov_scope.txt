@@ -1,0 +1,16 @@
++tree emu_tb.u_emu 0
+-module yucca_sync_fifo
+-module scfifo
+-module sync_simple_dual_port_ram
+-module altera_syncram
+-module sync_true_dual_port_ram
+-module rr_sch
+-module dwrr_sch
+-module check_sop_eop
+-module performance_probe
+-module emu_dfx
+-module mlite_if
+-module mlite_crossbar
+-module oh_to_idx
+-module ALTERA_DEVICE_FAMILIES
+-module ALTERA_LNSIM_MEMORY_INITIALIZATION

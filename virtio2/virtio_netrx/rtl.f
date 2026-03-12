@@ -1,0 +1,7 @@
++incdir+.
+virtio_netrx_define.svh
+virtio_netrx_slot_ctrl.sv
+virtio_netrx_top.sv
+virtio_netrx_wr_data_ctrl.sv
+virtio_netrx_wrrsp_sbd_ctrl.sv
+virtio_netrx_reg_dfx.sv

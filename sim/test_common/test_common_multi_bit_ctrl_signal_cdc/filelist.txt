@@ -1,0 +1,3 @@
+-F ../../../src/tlp_adaptor/rtl.f
+-F ../../../common/rtl.f
+common_multi_bit_ctrl_signal_cdc_tb.sv

@@ -1,0 +1,40 @@
+`include "../common/common64.rdlh"
+addrmap virtio_blk_desc_engine_dfx{
+
+    reg virtio_blk_desc_engine_max_chain_len{
+        swcfg_field virtio_blk_desc_engine_max_chain_len[19:0] = 32768;
+    };
+    virtio_blk_desc_engine_max_chain_len virtio_blk_desc_engine_max_chain_len @0x000;
+
+    reg virtio_blk_desc_engine_alloc_err{
+        woclr_field virtio_blk_desc_engine_alloc_err[63:0] = 0;
+    };
+    virtio_blk_desc_engine_alloc_err virtio_blk_desc_engine_alloc_err @0x100;
+
+    reg virtio_blk_desc_engine_free_err{
+        woclr_field virtio_blk_desc_engine_free_err[63:0] = 0;
+    };
+    virtio_blk_desc_engine_free_err virtio_blk_desc_engine_free_err @0x108;
+
+    reg virtio_blk_desc_engine_core_err{
+        woclr_field virtio_blk_desc_engine_core_err[63:0] = 0;
+    };
+    virtio_blk_desc_engine_core_err virtio_blk_desc_engine_core_err @0x110;
+
+    reg virtio_blk_desc_engine_alloc_status{
+        hwsts_field virtio_blk_desc_engine_alloc_status[63:0] = 0;
+    };
+    virtio_blk_desc_engine_alloc_status virtio_blk_desc_engine_alloc_status @0x120;
+
+    reg virtio_blk_desc_engine_free_status{
+        hwsts_field virtio_blk_desc_engine_free_status[63:0] = 0;
+    };
+    virtio_blk_desc_engine_free_status virtio_blk_desc_engine_free_status @0x128;
+
+    reg virtio_blk_desc_engine_core_status{
+        hwsts_field virtio_blk_desc_engine_core_status[63:0] = 0;
+    };
+    virtio_blk_desc_engine_core_status virtio_blk_desc_engine_core_status @0x130;
+
+    
+};

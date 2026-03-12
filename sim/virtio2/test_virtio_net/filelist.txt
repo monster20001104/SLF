@@ -1,0 +1,8 @@
+-F ../../../common/rtl.f
++incdir+../../../src/virtio2/.
+-F ../../../src/tlp_adaptor/rtl.f
+-F ../../../src/tlp_adap_arbiter/rtl.f
+-F ../../../src/virtio2/rtl.f
+virtio_net_tb.sv
+
+

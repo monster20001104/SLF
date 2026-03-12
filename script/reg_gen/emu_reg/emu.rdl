@@ -1,0 +1,78 @@
+`include "../common/common.rdlh"
+
+addrmap emu_dfx{
+    reg emu_top_err{
+        woclr_field emu_top_err[31:0] = 0;
+    };
+    emu_top_err emu_top_err @0x0;
+    
+    reg emu_reg_ctrl_err{
+        woclr_field emu_reg_ctrl_err[31:0] = 0;
+    };
+    emu_reg_ctrl_err emu_reg_ctrl_err @0x8;
+
+    reg emu_req_match_stat{
+        hwsts_field emu_req_match_stat[31:0] = 0;
+    };
+    emu_req_match_stat emu_req_match_stat @0x100;
+
+	reg emu_tx_cpl_stat{
+        hwsts_field emu_tx_cpl_stat[31:0] = 0;
+    };
+    emu_tx_cpl_stat emu_tx_cpl_stat @0x108;
+
+    reg emu_bp_blk_cnt_stat{
+        hwsts_field emu_bp_blk_cnt_stat[31:0] = 0;
+    };
+    emu_bp_blk_cnt_stat emu_bp_blk_cnt_stat @0x110;
+
+	reg emu_bp_vdat_cnt_stat{
+        hwsts_field emu_bp_vdat_cnt_stat[31:0] = 0;
+    };
+    emu_bp_vdat_cnt_stat emu_bp_vdat_cnt_stat @0x118;
+
+    reg emu_non_pst_exp_ck_stat{
+        hwsts_field emu_non_pst_exp_ck_stat[31:0] = 0;
+    };
+    emu_non_pst_exp_ck_stat emu_non_pst_exp_ck_stat @0x120;
+
+    reg emu_non_pst_act_ck_stat{
+        hwsts_field emu_non_pst_act_ck_stat[31:0] = 0;
+    };
+    emu_non_pst_act_ck_stat emu_non_pst_act_ck_stat @0x128;
+
+    reg emu_doorbell_qid_stat{
+        hwsts_field emu_doorbell_qid_stat[31:0] = 0;
+    };
+    emu_doorbell_qid_stat emu_doorbell_qid_stat @0x130;
+
+    reg emu_req_cookie_stat{
+        hwsts_field emu_req_cookie_stat[31:0] = 0;
+    };
+    emu_req_cookie_stat emu_req_cookie_stat @0x138;
+
+    reg emu_bypass_req_cnt{
+        woclr_field emu_bypass_req_cnt[31:0] = 0;
+    }; 
+    emu_bypass_req_cnt emu_bypass_req_cnt @0x200;
+
+    reg emu_bypass_cpl_cnt{
+        woclr_field emu_bypass_cpl_cnt[31:0] = 0;
+    }; 
+    emu_bypass_cpl_cnt emu_bypass_cpl_cnt @0x208;
+	
+	reg emu_comb_cnt{
+        woclr_field emu_comb_cnt[31:0] = 0;
+    }; 
+    emu_comb_cnt emu_comb_cnt @0x210;
+
+    reg emu_mwr_req_cnt{
+        woclr_field emu_mwr_req_cnt[31:0] = 0;
+    }; 
+    emu_mwr_req_cnt emu_mwr_req_cnt @0x218;
+
+    reg emu_beq2emu_req_cnt{
+        woclr_field emu_beq2emu_req_cnt[31:0] = 0;
+    }; 
+    emu_beq2emu_req_cnt emu_beq2emu_req_cnt @0x220;
+};

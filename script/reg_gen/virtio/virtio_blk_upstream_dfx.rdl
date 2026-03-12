@@ -1,0 +1,34 @@
+`include "../common/common64.rdlh"
+addrmap virtio_blk_upstream_dfx{
+    reg dfx_err{
+        woclr_field dfx_err[16:0] = 0;
+    };
+    dfx_err dfx_err @0x0;
+    reg dfx_status{
+        hwsts_field dfx_status[20:0] = 0;
+    };
+    dfx_status dfx_status @0x8;
+
+    reg beq2blk_pkt_blk_upstream_tran_drop_pkt_cnt{
+        woclr_field beq2blk_pkt_blk_upstream_tran_drop_pkt_cnt[47:0] = 0;
+    };
+    beq2blk_pkt_blk_upstream_tran_drop_pkt_cnt beq2blk_pkt_blk_upstream_tran_drop_pkt_cnt @0x20;
+
+    reg dma_cnt{
+        hwsts_field dma_cnt[15:0] = 0;
+    };
+    dma_cnt dma_cnt @0x28;
+
+    reg magic_num_generation_q_status_not_match_pkt_cnt{
+        woclr_field magic_num_generation_q_status_not_match_pkt_cnt[63:0] = 0;
+    };
+    magic_num_generation_q_status_not_match_pkt_cnt magic_num_generation_q_status_not_match_pkt_cnt @0x30;
+
+    reg dma_data_wr_req_if_backpressure_block_vdata_cnt{
+        hwsts_field dma_data_wr_req_if_backpressure_block_vdata_cnt[57:0] = 0;
+    };
+    dma_data_wr_req_if_backpressure_block_vdata_cnt dma_data_wr_req_if_backpressure_block_vdata_cnt @0x38;
+    
+
+
+};

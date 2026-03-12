@@ -1,0 +1,1 @@
+set_instance_assignment -name EMPTY_PLACE_REGION "X0 Y59 X150 Y59-R:C-empty_region" -to |

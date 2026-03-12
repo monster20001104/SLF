@@ -1,0 +1,64 @@
+`include "../common/common64.rdlh"
+addrmap virtio_used_dfx{
+    reg dfx_err{
+        woclr_field dfx_err[11:0] = 0;
+    };
+    dfx_err dfx_err @0x0;
+
+    reg dfx_irq_merge_core_net_tx_err{
+        woclr_field dfx_irq_merge_core_net_tx_err[3:0] = 0;
+    };
+    dfx_irq_merge_core_net_tx_err dfx_irq_merge_core_net_tx_err @0x8;
+
+    reg dfx_irq_merge_core_net_rx_err{
+        woclr_field dfx_irq_merge_core_net_rx_err[3:0] = 0;
+    };
+    dfx_irq_merge_core_net_rx_err dfx_irq_merge_core_net_rx_err @0x10;
+
+    reg dfx_used_idx_irq_merge_err{
+        woclr_field dfx_used_idx_irq_merge_err[19:0] = 0;
+    };
+    dfx_used_idx_irq_merge_err dfx_used_idx_irq_merge_err @0x18;
+
+    reg dfx_status{
+        hwsts_field dfx_status[25:0] = 0;
+    };
+    dfx_status dfx_status @0x40;
+
+    reg dfx_used_idx_irq_merge_status{
+        hwsts_field dfx_used_idx_irq_merge_status[14:0] = 0;
+    };
+    dfx_used_idx_irq_merge_status dfx_used_idx_irq_merge_status @0x48;
+
+    reg used_dfx_err_cnt{
+        woclr_field used_dfx_err_cnt[7:0] = 0;
+    };
+    used_dfx_err_cnt used_dfx_err_cnt @0x100;
+
+    reg dma_cnt{
+        hwsts_field dma_cnt[15:0] = 0;
+    };
+    dma_cnt dma_cnt @0x108;
+
+    reg dma_data_wr_req_if_backpressure_block_vdata_cnt{
+        hwsts_field dma_data_wr_req_if_backpressure_block_vdata_cnt[57:0] = 0;
+    };
+    dma_data_wr_req_if_backpressure_block_vdata_cnt dma_data_wr_req_if_backpressure_block_vdata_cnt @0x110;
+
+    reg net_tx_used_info_handshake_block_vdata_cnt{
+        hwsts_field net_tx_used_info_handshake_block_vdata_cnt[57:0] = 0;
+    };
+    net_tx_used_info_handshake_block_vdata_cnt net_tx_used_info_handshake_block_vdata_cnt @0x118;
+
+    reg net_rx_used_info_handshake_block_vdata_cnt{
+        hwsts_field net_rx_used_info_handshake_block_vdata_cnt[57:0] = 0;
+    };
+    net_rx_used_info_handshake_block_vdata_cnt net_rx_used_info_handshake_block_vdata_cnt @0x120;
+
+    reg blk_used_info_handshake_block_vdata_cnt{
+        hwsts_field blk_used_info_handshake_block_vdata_cnt[57:0] = 0;
+    };
+    blk_used_info_handshake_block_vdata_cnt blk_used_info_handshake_block_vdata_cnt @0x128;
+
+
+};

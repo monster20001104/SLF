@@ -1,0 +1,33 @@
+`include "../common/common64.rdlh"
+addrmap virtio_idx_engine_reg_dfx{
+    reg dfx_err{
+        woclr_field dfx_err[63:0] = 0;
+    };
+    dfx_err dfx_err0 @0x0;
+
+
+    reg dfx_status{
+        hwsts_field dfx_status[63:0] = 0;
+    };
+    dfx_status dfx_status0 @0x100;
+
+    reg dfx_cnt{
+        hwsts_field dfx_cnt[7:0] = 0;
+    };
+    dfx_cnt rd_flags_req_cnt        @0x200;
+    dfx_cnt rd_flags_rsp_cnt        @0x208;
+    dfx_cnt rd_flags_rsp_err_cnt    @0x210;
+    dfx_cnt rd_idx_req_cnt          @0x218;
+    dfx_cnt rd_idx_rsp_cnt          @0x220;
+    dfx_cnt rd_idx_rsp_err_cnt      @0x228;
+    dfx_cnt wr_req_cnt              @0x230;
+    dfx_cnt wr_rsp_cnt              @0x238;
+    
+
+    reg dfx_threshold{
+        swcfg_field dfx_threshold[15:0] = 16;
+    };
+    dfx_threshold dfx_threshold0 @0x400;
+
+  
+};

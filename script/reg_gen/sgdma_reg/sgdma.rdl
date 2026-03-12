@@ -1,0 +1,29 @@
+`include "../common/common.rdlh"
+
+addrmap sgdma_dfx{
+    reg sgdma_err{
+        woclr_field sgdma_err[31:0] = 0;
+    };
+    sgdma_err sgdma_err @0x0;
+    
+    reg sgdma_ff_stat{
+        hwsts_field sgdma_ff_stat[31:0] = 0;
+    };
+    sgdma_ff_stat sgdma_ff_stat @0x100;
+
+	reg sgdma_fsm_if_stat{
+        hwsts_field sgdma_fsm_if_stat[31:0] = 0;
+    };
+    sgdma_fsm_if_stat sgdma_fsm_if_stat @0x108;
+
+    reg sgdma_dma_cnt{
+        woclr_field sgdma_dma_cnt[31:0] = 0;
+    }; 
+    sgdma_dma_cnt sgdma_dma_cnt @0x200;
+
+    reg sgdma_beq_cnt{
+        woclr_field sgdma_beq_cnt[31:0] = 0;
+    }; 
+    sgdma_beq_cnt sgdma_beq_cnt @0x208;
+	
+};

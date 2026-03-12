@@ -1,0 +1,120 @@
+`include "../common/common64.rdlh"
+
+addrmap reg_mgmt{
+    reg version{
+        hwsts_field version[31:0] = 0;
+    };
+    version version @0x0;
+
+    reg git_hash{
+        hwsts_field git_hash[31:0] = 0;
+    };
+    git_hash git_hash @0x8;
+
+    reg chip_vendor_id{
+        hwsts_field chip_vendor_id[31:0] = 0;
+    };
+    chip_vendor_id chip_vendor_id @0x10;
+
+    reg timestamp{
+        hwsts_field timestamp[63:0] = 0;
+    };
+    timestamp timestamp @0x18;
+
+    reg pcie_status{
+        hwsts_field pcie_status[31:0] = 0;
+    };
+    pcie_status pcie_status @0x40;
+
+    reg host_pcie_status{
+        hwsts_field host_pcie_status[31:0] = 0;
+    };
+    host_pcie_status host_pcie_status @0x48;
+
+    reg pcie_err_cnt{
+        hwsts_field pcie_err_cnt[63:0] = 0;
+    };
+    pcie_err_cnt pcie_err_cnt @0x50;
+
+    reg host_pcie_rst_to_link_time_cnt{
+        hwsts_field host_pcie_rst_to_link_time_cnt[63:0] = 0;
+    };
+    host_pcie_rst_to_link_time_cnt host_pcie_rst_to_link_time_cnt @0x58;
+
+    reg temp_sensor{
+        hwsts_field temp_sensor[31:0] = 0;
+    };
+    temp_sensor temp_sensor @0x80;
+
+    reg voltage_sensor{
+        hwsts_field voltage_sensor[63:0] = 0;
+    };
+    voltage_sensor voltage_sensor @0x90;
+
+    reg seu_status_0{
+        hwsts_field seu_status_0[63:0] = 0;
+    };
+    seu_status_0 seu_status_0 @0x100;
+
+    reg seu_status_1{
+        hwsts_field seu_status_1[63:0] = 0;
+    };
+    seu_status_1 seu_status_1 @0x108;
+
+    reg chip_id{
+        hwsts_field chip_id[63:0] = 0;
+    };
+    chip_id chip_id @0x120;
+
+    reg reg_idx_tbl_status{
+        hwsts_field reg_idx_tbl_status[31:0] = 0;
+    };
+    reg_idx_tbl_status reg_idx_tbl_status @0x130;    
+
+    reg reg_idx_tbl_err{
+        woclr_field reg_idx_tbl_err[31:0] = 0;
+    };
+    reg_idx_tbl_err reg_idx_tbl_err @0x138;
+
+    reg emr_err{
+        hwsts_field emr_err[0:0] = 0;
+    };
+    emr_err emr_err @0x140;
+
+    reg emr_read{
+        swmod_field emr_read[0:0] = 0;
+    };
+    emr_read emr_read @0x148;
+
+    reg emr_data_0_l{
+        hwsts_field emr_data_0_l[63:0] = 0;
+    };
+    emr_data_0_l emr_data_0_l @0x150;
+
+    reg emr_data_0_h{
+        hwsts_field emr_data_0_h[63:0] = 0;
+    };
+    emr_data_0_h emr_data_0_h @0x158;
+
+    reg emr_data_1_l{
+        hwsts_field emr_data_1_l[63:0] = 0;
+    };
+    emr_data_1_l emr_data_1_l @0x160;
+
+    reg emr_data_1_h{
+        hwsts_field emr_data_1_h[63:0] = 0;
+    };
+    emr_data_1_h emr_data_1_h @0x168;
+
+    reg emr_data_2_l{
+        hwsts_field emr_data_2_l[63:0] = 0;
+    };
+    emr_data_2_l emr_data_2_l @0x170;
+
+    reg emr_data_2_h{
+        hwsts_field emr_data_2_h[63:0] = 0;
+    };
+    emr_data_2_h emr_data_2_h @0x178;
+
+
+};

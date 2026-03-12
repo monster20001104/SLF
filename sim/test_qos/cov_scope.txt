@@ -1,0 +1,10 @@
++tree qos_tb.u_qos 0
+-module yucca_sync_fifo
+-module scfifo
+-module sync_simple_dual_port_ram
+-module altera_syncram
+-module sync_true_dual_port_ram
+-module rr_sch
+-module dwrr_sch
+-module ALTERA_DEVICE_FAMILIES
+-module ALTERA_LNSIM_MEMORY_INITIALIZATION

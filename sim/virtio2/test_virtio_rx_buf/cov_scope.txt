@@ -1,0 +1,21 @@
++tree virtio_rx_buf_tb 0
+-module yucca_sync_fifo
+-module scfifo
+-module sync_simple_dual_port_ram
+-module single_port_ram
+-module altera_syncram
+-module sync_true_dual_port_ram
+-module rr_sch
+-module dwrr_sch
+-module pkt_fifo
+-module ALTERA_DEVICE_FAMILIES
+-module ALTERA_LNSIM_MEMORY_INITIALIZATION
+-module mlite_if
+
+-tree virtio_rx_buf_tb.u_virtio_rx_buf_top.u_mlite_crossbar 0
+-tree virtio_rx_buf_tb.u_virtio_rx_buf_top.u_virtio_rx_buf_linklist.u0_virtio_sch 0
+
+-module virtio_rx_buf_dfx
+-module lfrs_32_noload
+-module virtio_sch
+-module adder_tree

@@ -1,0 +1,4 @@
+-F ../../../common/rtl.f
+-F ../../../src/virtio2/virtio_irq_merge_core/rtl.f
+virtio_irq_merge_core_tb.sv
+

@@ -1,0 +1,49 @@
+`include "../common/common64.rdlh"
+
+addrmap virtio_blk_downstream_dfx{
+    reg blk_downstream_err{
+        woclr_field blk_downstream_err[63:0] = 0;
+    }; 
+    blk_downstream_err blk_downstream_err @0x0;
+
+    reg blk_downstream_ff_stat{
+        hwsts_field blk_downstream_ff_stat[63:0] = 0;
+    }; 
+    blk_downstream_ff_stat blk_downstream_ff_stat @0x100;
+
+    reg blk_downstream_fsm_stat{
+        hwsts_field blk_downstream_fsm_stat[63:0] = 0;
+    }; 
+    blk_downstream_fsm_stat blk_downstream_fsm_stat @0x108;
+
+    reg blk_downstream_err_cnt{
+        woclr_field blk_downstream_err_cnt[63:0] = 0;
+    }; 
+    blk_downstream_err_cnt blk_downstream_err_cnt @0x200;
+
+    reg blk_downstream_if_cnt{
+        woclr_field blk_downstream_if_cnt[63:0] = 0;
+    }; 
+    blk_downstream_if_cnt blk_downstream_if_cnt @0x208;
+
+    reg blk_desc_hs_related_cnt{
+        hwsts_field blk_desc_hs_related_cnt[63:0] = 0;
+    }; 
+    blk_desc_hs_related_cnt blk_desc_hs_related_cnt @0x210;
+
+    reg dma_rd_req_bp_related_cnt{
+        hwsts_field dma_rd_req_bp_related_cnt[63:0] = 0;
+    }; 
+    dma_rd_req_bp_related_cnt dma_rd_req_bp_related_cnt @0x218;
+
+    reg dma_rd_rsp_bp_vdata_cnt{
+        hwsts_field dma_rd_rsp_bp_vdata_cnt[63:0] = 0;
+    }; 
+    dma_rd_rsp_bp_vdata_cnt dma_rd_rsp_bp_vdata_cnt @0x220;
+
+    reg blk_downstream_dma_inflight_threshold{
+        swcfg_field blk_downstream_dma_inflight_threshold[9:0] = 400;
+    }; 
+    blk_downstream_dma_inflight_threshold blk_downstream_dma_inflight_threshold @0x500;
+
+};

@@ -1,0 +1,25 @@
+`ifndef __COMMON_RDLH_
+`define __COMMON_RDLH_
+
+field swcfg_field{
+    hw=r;sw=rw;
+};
+
+field swmod_field{
+    hw=r;sw=rw;swmod;
+};
+
+field swcfg_hwclr_field{
+    hw=r;sw=rw;hwclr;
+};
+
+field hwsts_field{
+    hw=w; sw=r;
+};
+
+field woclr_field{
+    hw=rw; sw=rw; woclr;
+};
+
+
+`endif

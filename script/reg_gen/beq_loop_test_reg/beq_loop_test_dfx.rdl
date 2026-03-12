@@ -1,0 +1,79 @@
+`include "../common/common64.rdlh"
+
+addrmap beq_loop_test_dfx{
+    reg en_r{
+        swcfg_field en_r[9:0] = 0;
+    };
+    en_r en_r @0x0;
+
+    reg seed_r0{
+        swmod_field seed_r0[31:0] = 32'hC876_FABD;
+    };
+    seed_r0 seed_r0 @0x8;
+
+    reg seed_r1{
+        swmod_field seed_r1[31:0] = 32'hE43B_7D5E;
+    };
+    seed_r1 seed_r1 @0x10;
+
+    reg seed_r2{
+        swmod_field seed_r2[31:0] = 32'h721D_BEAF;
+    };
+    seed_r2 seed_r2 @0x18;
+
+    reg seed_r3{
+        swmod_field seed_r3[31:0] = 32'hB90E_DF57;
+    };
+    seed_r3 seed_r3 @0x20;
+
+    reg seed_r4{
+        swmod_field seed_r4[31:0] = 32'hDC87_6FAB;
+    };
+    seed_r4 seed_r4 @0x28;
+
+    reg seed_r5{
+        swmod_field seed_r5[31:0] = 32'hEE43_B7D5;
+    };
+    seed_r5 seed_r5 @0x30;
+
+    reg seed_r6{
+        swmod_field seed_r6[31:0] = 32'hF721_DBEA;
+    };
+    seed_r6 seed_r6 @0x38;
+
+    reg seed_r7{
+        swmod_field seed_r7[31:0] = 32'h7B90_EDF5;
+    };
+    seed_r7 seed_r7 @0x40;
+
+    reg tcntl_r{
+        hwsts_field tcntl_r[63:0] = 0;
+    };
+    tcntl_r tcntl_r @0x48;
+
+    reg tcnth_r{
+        hwsts_field tcnth_r[63:0] = 0;
+    };
+    tcnth_r tcnth_r @0x50;
+
+    reg rcntl_r{
+        hwsts_field rcntl_r[63:0] = 0;
+    };
+    rcntl_r rcntl_r @0x58;
+
+    reg rcnth_r{
+        hwsts_field rcnth_r[63:0] = 0;
+    };
+    rcnth_r rcnth_r @0x60;
+
+    reg clccnt_r{
+        swmod_field clccnt_r = 0;
+    };
+    clccnt_r clccnt_r @0x68;
+
+    reg error_r{
+        woclr_field error_r = 0;
+    };
+    error_r error_r @0x70;   
+
+};

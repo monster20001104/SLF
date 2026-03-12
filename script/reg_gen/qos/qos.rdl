@@ -1,0 +1,39 @@
+`include "../common/common.rdlh"
+
+addrmap qos_dfx{
+    reg qos_update_err{
+        woclr_field qos_update_err[31:0] = 0;
+    };
+    qos_update_err qos_update_err @0x0;
+
+    reg qos_regconfig_err{
+        woclr_field qos_regconfig_err[31:0] = 0;
+    };
+    qos_regconfig_err qos_regconfig_err @0x8;
+    
+    reg qos_update_reg_stat{
+        hwsts_field qos_update_reg_stat[31:0] = 0;
+    };
+    qos_update_reg_stat qos_update_reg_stat @0x100;
+
+    reg qos_rdy_stat{
+        hwsts_field qos_rdy_stat[31:0] = 0;
+    };
+    qos_rdy_stat qos_rdy_stat @0x108;
+
+    reg qos_update_cnt{
+        woclr_field qos_update_cnt[31:0] = 0;
+    }; 
+    qos_update_cnt qos_update_cnt @0x200;
+
+    reg qos_query_req_cnt{
+        woclr_field qos_query_req_cnt[31:0] = 0;
+    }; 
+    qos_query_req_cnt qos_query_req_cnt @0x208;
+
+    reg qos_query_rsp_cnt{
+        woclr_field qos_query_rsp_cnt[31:0] = 0;
+    }; 
+    qos_query_rsp_cnt qos_query_rsp_cnt @0x210;
+
+};

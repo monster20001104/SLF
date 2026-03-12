@@ -1,0 +1,6 @@
++incdir+../../../src/virtio2/.
+virtio_rx_buf_tb.sv
+-F ../../../common/rtl.f
+-F ../../../src/virtio2/virtio_rx_buf/rtl.f
+../../../src/virtio2/common/virtio_sch.sv
+

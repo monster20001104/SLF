@@ -1,0 +1,3 @@
+-F ../../../common/rtl.f
+mux_nto1_tb.sv
+

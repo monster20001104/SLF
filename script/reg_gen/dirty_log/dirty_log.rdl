@@ -1,0 +1,14 @@
+`include "../common/common.rdlh"
+
+addrmap dirty_log_dfx{
+    reg dirty_log_status{
+        hwsts_field dirty_log_status[31:0] = 0;
+    };
+    dirty_log_status dirty_log_status @0x0;
+
+    reg dirty_log_err{
+        hwsts_field dirty_log_err[31:0] = 0;
+    };
+    dirty_log_err dirty_log_err @0x8;
+
+};

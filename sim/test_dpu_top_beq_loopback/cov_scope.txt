@@ -1,0 +1,8 @@
++tree dpu_top_tb.u_dpu_top 0
+-module yucca_sync_fifo
+-module scfifo
+-module sync_simple_dual_port_ram
+-module altera_syncram
+-module wrr_sch
+-module rr_sch
+-module ALTERA_DEVICE_FAMILIES

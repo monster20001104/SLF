@@ -1,0 +1,5 @@
+-F ../../common/rtl.f
+-F ../../src/tlp_adaptor/rtl.f
+-F ../../src/sgdma/rtl.f
+-F ../../src/beq/rtl.f
+beq_wrr_sch_tb.sv

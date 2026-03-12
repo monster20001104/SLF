@@ -1,0 +1,15 @@
+-F ../../../src/tlp_adaptor/rtl.f
+-F ../../../common/rtl.f
+-F ../../../src/mgmt/rtl.f
+../../../ip/i2c_slave_to_avalon_mm/synth/i2c_slave_to_avalon_mm.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altera_i2cslave_to_avlmm_bridge.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_avl_mst_intf_gen.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_clk_cnt.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_condt_det.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_databuffer.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_rxshifter.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_slvfsm.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_spksupp.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_txout.v
+../../../ip/i2c_slave_to_avalon_mm/altera_i2cslave_to_avlmm_bridge_1915/synth/altr_i2c_txshifter.v
+mgmt_tb.sv

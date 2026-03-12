@@ -1,0 +1,3 @@
+-F ../../../common/rtl.f
+../../../common/mlite_64to32_splitter.sv
+mlite_64to32_splitter_tb.sv
