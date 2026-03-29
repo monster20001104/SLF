@@ -257,7 +257,7 @@ class TB(object):
             elif has_pkt:
                 # 申请成功
                 rsp_data.ok = 1
-                alloc_success = True
+                alloc_success = True 
             else:
                 # 队列为空或未启动 (Done)
                 # 随机覆盖两种触发 Done 的条件，以验证 RTL 逻辑

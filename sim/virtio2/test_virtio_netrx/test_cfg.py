@@ -17,10 +17,10 @@ class Err_Type_List(TypedDict):
 
 
 err_type_list: Err_Type_List = Err_Type_List(
-    no_err=10,
-    desc_rsp_err=1,
-    desc_len_err=1,
-    forced_shutdown=1,
+    no_err=100,
+    desc_rsp_err=0,
+    desc_len_err=0,
+    forced_shutdown=0,
 )
 
 

@@ -138,7 +138,7 @@ module virtio_nettx_rd_data_ctrl
 
     logic [31:0]            inflight_data_parameter;
 
-    // inflight_data_parameter发出DMA请求但数据还没返回FIFO的最大数据量
+    // inflight_data_parameter 发出DMA请求但数据还没返回FIFO的最大数据量
     always @(posedge clk)begin
         if(rst) begin
             inflight_data_parameter <= DATA_FIFO_DEPTH-129;     // 4KB空间
@@ -226,7 +226,7 @@ module virtio_nettx_rd_data_ctrl
         WR_CMD: 
             begin
                 if(cmd_fifo_pfull == 0)begin
-                    if(cnt_desc < valid_desc_cnt )
+                    if(cnt_desc < valid_desc_cnt ) //当前任务总共多少个描述符
                         proc_desc_nstate = RD_DESC;
                     else if(cnt_desc == valid_desc_cnt )
                         proc_desc_nstate = DESC_IDLE;

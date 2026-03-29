@@ -185,7 +185,7 @@ module virtio_nettx_rsp_data_ctrl
                     if(dout_order_fifo.chain_tail)
                         nstate = GEN_USED;
                     else
-                        nstate = FINISH;
+                        nstate = FINISH; // 表示结束这次切片的处理
                 end
             end
         TX_DATA_ERR:

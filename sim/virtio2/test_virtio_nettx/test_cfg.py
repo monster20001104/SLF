@@ -10,12 +10,14 @@ class Err_Type_List(TypedDict):
     no_err: float
     desc_rsp_err: float             
     forced_shutdown: float  
-
+    tlp_err: float
+    
 
 err_type_list: Err_Type_List = Err_Type_List(
-    no_err=70,             
+    no_err=100,            
     desc_rsp_err=0,                   
-    forced_shutdown=30,      
+    forced_shutdown=0, 
+    tlp_err=0,     
 )
 
 
@@ -28,7 +30,6 @@ class Cfg(NamedTuple):
     min_desc_cnt: int       
     max_desc_cnt: int       
     random_qos: float       
-    tlp_err: float
 
 
 smoke_cfg = Cfg(
@@ -40,5 +41,4 @@ smoke_cfg = Cfg(
     max_desc_cnt=8,         
     alloc_slot_err=0.0,     
     random_qos=0.8,         
-    tlp_err=0.1,
 )
